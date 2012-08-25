@@ -28,10 +28,14 @@
                                             style:UIBarButtonItemStyleBordered
                                             target:self
                                             action:@selector(logoutButtonWasPressed:)];
+//  self.navigationItem.rightBarButtonItem.tintColor = [UIColor redColor];
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(sessionStateChanged:)
                                                name:@"SessionStateChangedNotification"
                                              object:nil];
+  
+  wishArray = [[NSMutableArray alloc] init];
+
 }
 
 - (void)populateUserDetails {
@@ -63,7 +67,6 @@
   UIImagePickerController *libraryPicker = [[UIImagePickerController alloc] init];
   libraryPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
   libraryPicker.delegate = self;
-  libraryPicker.allowsEditing = YES;
   [self presentModalViewController:libraryPicker animated:NO];
 }
 
@@ -80,7 +83,11 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
   [self dismissModalViewControllerAnimated:NO];
-  
+  WishViewController *wishvc = [[WishViewController alloc] init];
+  UIImage *selectedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+  NSLog(@"image size:%@", NSStringFromCGSize(selectedImage.size));
+  wishvc.wishImage = selectedImage;
+  [self.navigationController pushViewController:wishvc animated:YES];
 }
 
 - (void)viewDidUnload {
@@ -93,5 +100,14 @@
 {
   return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+- (void)addWishItem:(YSWishItem*)item {
+  [wishArray addObject:item];
+}
+
+- (void)loadWishItems {
+  
+}
+
 
 @end

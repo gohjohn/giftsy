@@ -25,7 +25,7 @@ NSString *const SessionStateChangedNotification =
   self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
   self.navController = [[UINavigationController alloc]
                         initWithRootViewController:self.viewController];
-  
+  self.navController.navigationItem.backBarButtonItem.tintColor = [UIColor redColor];
   if ([self.navController.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)] ) {
     UIImage *image = [UIImage imageNamed:@"nav-bar-image.png"];
     [self.navController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];

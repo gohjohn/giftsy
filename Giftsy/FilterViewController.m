@@ -27,7 +27,7 @@
   
   arrEffects = [[NSMutableArray alloc] initWithObjects:
                 [NSDictionary dictionaryWithObjectsAndKeys:@"Original",@"title",@"",@"method", nil],
-                [NSDictionary dictionaryWithObjectsAndKeys:@"E1",@"title",@"e1",@"method", nil], 
+                [NSDictionary dictionaryWithObjectsAndKeys:@"E1",@"title",@"e1",@"method", nil],
                 [NSDictionary dictionaryWithObjectsAndKeys:@"E2",@"title",@"e2",@"method", nil],
                 [NSDictionary dictionaryWithObjectsAndKeys:@"E3",@"title",@"e3",@"method", nil],
                 [NSDictionary dictionaryWithObjectsAndKeys:@"E4",@"title",@"e4",@"method", nil],
@@ -53,11 +53,11 @@
   // EFFECTS: Various elements of the recipe is initialized and displayed.
   
   for (int i = 0; i < kNumberOfFilters; i++) {
-
+    
     NSDictionary *dict = [arrEffects objectAtIndex:i];
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kFilterButtonSize, 80)];
-
+    
     UIButton *filterIcon = [UIButton buttonWithType:UIButtonTypeCustom];
     filterIcon.frame = CGRectMake(0, 0, 50, 50);
     filterIcon.center = CGPointMake(32, 28);
@@ -72,8 +72,8 @@
       [filterIcon setImage:miniThumbImage forState:UIControlStateNormal];
     }
     
-    [filterIcon addTarget:self 
-                   action:@selector(showFilteredImage:) 
+    [filterIcon addTarget:self
+                   action:@selector(showFilteredImage:)
          forControlEvents:UIControlEventTouchUpInside];
     
     [view addSubview:filterIcon];
@@ -107,7 +107,7 @@
 			view.frame = frame;
       NSLog(@"%f", curXLoc);
 			curXLoc += kFilterButtonSize;
-  
+      
 		}
 	}
 	
@@ -129,13 +129,13 @@
 
 - (void)viewDidUnload
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+  [super viewDidUnload];
+  // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+  return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 @end
