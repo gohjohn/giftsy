@@ -17,7 +17,7 @@
 
 
 @interface ViewController : UIViewController <UINavigationControllerDelegate,
-UIImagePickerControllerDelegate> {
+UIImagePickerControllerDelegate, FBFriendPickerDelegate> {
   NSMutableArray *wishArray;
   IBOutlet UIScrollView *wishList;
 }

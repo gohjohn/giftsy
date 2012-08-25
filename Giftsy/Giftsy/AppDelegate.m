@@ -108,7 +108,7 @@ NSString *const SessionStateChangedNotification =
 }
 
 - (void)openSession {
-  NSArray *permissions = [[NSArray alloc] initWithObjects:@"user_birthday", @"friends_birthday", @"user_interests", nil];
+  NSArray *permissions = [[NSArray alloc] initWithObjects:@"user_birthday", @"friends_birthday", @"user_interests", @"publish_actions", nil];
   
   [FBSession openActiveSessionWithPermissions:permissions
                                  allowLoginUI:YES

@@ -14,10 +14,13 @@
 @property (strong, nonatomic) IBOutlet FBProfilePictureView *userProfileImage;
 @property (strong, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *userBirthdayLabel;
+@property (strong, nonatomic) NSMutableDictionary *postParams;
 
 @end
 
 @implementation ViewController
+
+@synthesize postParams;
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -57,6 +60,9 @@
          appDelegate.userId = self.userProfileImage.profileID;
        }
      }];
+    FBCacheDescriptor *friendCacheDescriptor =
+    [FBFriendPickerViewController cacheDescriptor];
+    [friendCacheDescriptor prefetchAndCacheForSession:FBSession.activeSession];
   }
 }
 
@@ -138,6 +144,101 @@
 			curYLoc += 70;
     }
 	}
+}
+
+- (IBAction)showFriendsAction:(id)sender {
+  // Initialize the friend picker
+  FBFriendPickerViewController *friendPickerController =
+  [[FBFriendPickerViewController alloc] init];
+  
+  // Configure the picker ...
+  friendPickerController.title = @"My Friends";
+  // Set this view controller as the friend picker delegate
+  friendPickerController.delegate = self;
+  // Allow only a single friend to be selected
+  friendPickerController.allowsMultipleSelection = NO;
+  
+  // Fetch the data
+  [friendPickerController loadData];
+  
+  // Present view controller modally.e the deprecated
+  if ([self
+       respondsToSelector:@selector(presentViewController:animated:completion:)]) {
+    // iOS 5+
+    [self presentViewController:friendPickerController
+                       animated:YES
+                     completion:nil];
+  } else {
+    [self presentModalViewController:friendPickerController animated:YES];
+  }
+}
+
+- (void)facebookViewControllerCancelWasPressed:(id)sender
+{
+  [self dismissModalViewControllerAnimated:YES];
+  
+}
+
+- (void)facebookViewControllerDoneWasPressed:(FBFriendPickerViewController *)friendPicker
+{
+  [self dismissModalViewControllerAnimated:YES];
+  NSArray *friends = friendPicker.selection;
+  id<FBGraphUser> friend = [friends objectAtIndex:0];
+  UIAlertView *alert = [[UIAlertView alloc]initWithTitle:friend.first_name
+                                                 message:friend.id
+                                                delegate:nil
+                                       cancelButtonTitle:@"OK"
+                                       otherButtonTitles:nil, nil];
+  [alert show];
+}
+
+- (IBAction)shareOnFacebook:(id)sender {
+  
+  NSString *message = [[NSString alloc] initWithFormat:@"I wished for a "];
+  int count = 0;
+  for (YSWishItem *item in wishArray) {
+    if (count > 0) {
+      [message stringByAppendingString:[NSString stringWithFormat:@", " ]];
+    }
+    NSLog(@"hello");
+    [message stringByAppendingString:[NSString stringWithString:item.name]];
+    count++;
+    NSLog(@"%@", message);
+  }
+  
+  self.postParams =
+  [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+   @"https://www.facebook.com/pages/Giftsy/376683299071946", @"link",
+   @"https://sphotos-a.xx.fbcdn.net/hphotos-ash4/294321_380592942014315_1089014929_n.jpg", @"picture",
+   message, @"message",
+   @"I updated my wishlist via Giftsy", @"name",
+   @"Join Giftsy today to let your friends know what you wish to have!", @"caption",
+   @"Giftsy is a gift collaborating app that lets you know what each other wishes for!", @"description",
+   nil];
+  
+  [FBRequestConnection startWithGraphPath:@"me/feed"
+                               parameters:self.postParams
+                               HTTPMethod:@"POST"
+                        completionHandler:^(FBRequestConnection *connection,
+                                            id result,
+                                            NSError *error) {
+                          NSString *alertText;
+                          if (error) {
+                            alertText = [NSString stringWithFormat:
+                                         @"error: domain = %@, code = %d",
+                                         error.domain, error.code];
+                          } else {
+                            alertText = [NSString stringWithFormat:
+                                         @"Successfully shared!"];
+                          }
+                          // Show the result in an alert
+                          [[[UIAlertView alloc] initWithTitle:@"Giftsy"
+                                                      message:alertText
+                                                     delegate:self
+                                            cancelButtonTitle:@"OK!"
+                                            otherButtonTitles:nil]
+                           show];
+                        }];
 }
 
 @end
