@@ -8,23 +8,28 @@
 
 #import "Wish.h"
 #import "Profile.h"
+
 @interface Wish(){
-    int _wishId;
-    NSString *wishName;
-    NSMutableArray *collaborators;
-    NSMutableArray *collaboratorIds;
-    Profile *wishOwner;
-    NSString *whereToGet;
-    NSString *price;
+  int _wishId;
+  NSString *wishName;
+  NSMutableArray *collaborators;
+  NSMutableArray *collaboratorIds;
+  NSString *wishOwner;
+  NSString *whereToGet;
+  NSString *price;
+  UIImage *image;
 }
+
+@property (strong, nonatomic) NSString *wishName;
+@property (strong, nonatomic) NSString *wishOwner;
+@property (strong, nonatomic) NSString *whereToGet;
+@property (strong, nonatomic) NSString *price;
+
 @end
-@implementation Wish{
-    
-}
 
+@implementation Wish
 
-
--(Wish*) initWithId:(int)wishId owner:(Profile*)owner{
+- (id)initWithId:(int)wishId owner:(Profile*)owner{
     self = [super init];
     if (self) {
         _wishId = wishId;
@@ -33,6 +38,8 @@
     }
     return self;
 }
+
+
 
 -(id) init{
     self = [super init];

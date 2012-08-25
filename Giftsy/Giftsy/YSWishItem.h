@@ -8,16 +8,27 @@
 
 #import <Foundation/Foundation.h>
 
-@interface YSWishItem : NSObject
+
+
+@interface YSWishItem : UIView {
+  UILabel *nameLabel;
+  UILabel *whereLabel;
+  UILabel *priceLabel;
+}
 
 - (id)initWithImage:(UIImage*)img
                name:(NSString*)nm
               where:(NSString*)whr
-              price:(NSString*)px;
+              price:(NSString*)px
+              owner:(NSString*)owr;
+
+- (void)layoutIntoView;
+
 
 @property (strong, nonatomic) UIImage *image;
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *where;
 @property (strong, nonatomic) NSString *price;
+@property (strong, nonatomic) NSString *owner;
 
 @end

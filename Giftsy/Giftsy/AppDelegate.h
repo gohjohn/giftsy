@@ -23,4 +23,6 @@ extern NSString *const SCSessionStateChangedNotification;
 @property (strong, nonatomic) ViewController *viewController;
 @property (strong, nonatomic) UINavigationController *navController;
 
+@property (strong, nonatomic) NSString *userId;
+
 @end

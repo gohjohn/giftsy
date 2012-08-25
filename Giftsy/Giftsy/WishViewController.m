@@ -8,6 +8,7 @@
 
 #import "WishViewController.h"
 #import "YSWishItem.h"
+#import "AppDelegate.h"
 
 #define kOFFSET_FOR_KEYBOARD 216.0
 
@@ -34,6 +35,9 @@
   wishImageView.image = wishImage;
   [wishImageView.layer setBorderColor: [[UIColor whiteColor] CGColor]];
   [wishImageView.layer setBorderWidth: 4.0];
+  wishImageView.layer.shadowOffset = CGSizeMake(5, 5);
+  wishImageView.layer.shadowRadius = 10;
+  wishImageView.layer.shadowOpacity = 0.5;
   // Do any additional setup after loading the view from its nib.
 }
 
@@ -133,12 +137,20 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction)back:(id)sender {
-  [self.navigationController popViewControllerAnimated:YES];
+- (IBAction)wishButtonPressed:(id)sender {
+  
+  AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+  
   YSWishItem *wishItem = [[YSWishItem alloc] initWithImage:self.wishImage
                                                       name:name.text
                                                      where:where.text
-                                                     price:price.text];
+                                                     price:price.text
+                                                      owner:appDelegate.userId];
+  [wishItem layoutIntoView];
+  NSLog(@"size of wish: %@", NSStringFromCGSize(wishItem.frame.size));
+  [self.delegate addWishItem:wishItem];
+  
+  [self.navigationController popViewControllerAnimated:NO];
 }
 
 @end

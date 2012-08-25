@@ -17,6 +17,7 @@ NSString *const SessionStateChangedNotification =
 @implementation AppDelegate
 
 @synthesize navController;
+@synthesize userId;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   [FBProfilePictureView class];

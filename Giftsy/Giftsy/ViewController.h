@@ -14,10 +14,14 @@
 #import "WishViewController.h"
 #import "YSWishItem.h"
 
+
+
 @interface ViewController : UIViewController <UINavigationControllerDelegate,
 UIImagePickerControllerDelegate> {
   NSMutableArray *wishArray;
+  IBOutlet UIScrollView *wishList;
 }
+
 
 - (void)addWishItem:(YSWishItem*)item;
 
