@@ -10,17 +10,27 @@
 #import "LoginViewController.h"
 #import "ViewController.h"
 
+
+NSString *const SessionStateChangedNotification =
+@"app.nvc.Giftsy:SessionStateChangedNotification";
+
 @implementation AppDelegate
 
 @synthesize navController;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  [FBProfilePictureView class];
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   // Override point for customization after application launch.
   self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
   self.navController = [[UINavigationController alloc]
                         initWithRootViewController:self.viewController];
+  
+  if ([self.navController.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)] ) {
+    UIImage *image = [UIImage imageNamed:@"nav-bar-image.png"];
+    [self.navController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+  }
+  
   self.window.rootViewController = self.navController;
   [self.window makeKeyAndVisible];
   
@@ -56,7 +66,7 @@
 }
 
 - (void)sessionStateChanged:(FBSession *)session
-                      state:(FBSessionState) state
+                      state:(FBSessionState)state
                       error:(NSError *)error {
   switch (state) {
     case FBSessionStateOpen: {
@@ -82,6 +92,9 @@
       break;
   }
   
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"SessionStateChangedNotification"
+                                                      object:session];
+  
   if (error) {
     UIAlertView *alertView = [[UIAlertView alloc]
                               initWithTitle:@"Error"
@@ -94,7 +107,9 @@
 }
 
 - (void)openSession {
-  [FBSession openActiveSessionWithPermissions:nil
+  NSArray *permissions = [[NSArray alloc] initWithObjects:@"user_birthday", @"friends_birthday", @"user_interests", nil];
+  
+  [FBSession openActiveSessionWithPermissions:permissions
                                  allowLoginUI:YES
                             completionHandler:
    ^(FBSession *session,

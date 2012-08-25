@@ -8,8 +8,13 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>icon</string>
+		<string>icon@2x</string>
+	</array>
 	<key>CFBundleIdentifier</key>
-	<string>nvc.app.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>app.nvc.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -31,11 +36,6 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
-	<key>CFBundleIconFiles</key>
-	<array>
-		<string>icon</string>
-		<string>icon@2x</string>
-	</array>
 	<key>FacebookAppID</key>
 	<string>275637782540214</string>
 	<key>LSRequiresIPhoneOS</key>

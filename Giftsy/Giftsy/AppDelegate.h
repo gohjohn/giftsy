@@ -10,6 +10,8 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "LoginViewController.h"
 
+extern NSString *const SCSessionStateChangedNotification;
+
 @class ViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

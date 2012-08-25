@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import "AppDelegate.h"
+#import <QuartzCore/QuartzCore.h> 
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @end

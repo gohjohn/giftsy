@@ -10,29 +10,83 @@
 
 @interface ViewController ()
 
+@property (strong, nonatomic) IBOutlet FBProfilePictureView *userProfileImage;
+@property (strong, nonatomic) IBOutlet UILabel *userNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *userBirthdayLabel;
+
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
+- (void)viewDidLoad {
+  [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+//  self.navigationController.navigationBar.tintColor = [UIColor redColor];
+  
   self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
                                             initWithTitle:@"Logout"
                                             style:UIBarButtonItemStyleBordered
                                             target:self
                                             action:@selector(logoutButtonWasPressed:)];
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(sessionStateChanged:)
+                                               name:@"SessionStateChangedNotification"
+                                             object:nil];
 }
 
--(void)logoutButtonWasPressed:(id)sender {
+- (void)populateUserDetails {
+  if (FBSession.activeSession.isOpen) {
+    [[FBRequest requestForMe] startWithCompletionHandler:
+     ^(FBRequestConnection *connection,
+       NSDictionary<FBGraphUser> *user,
+       NSError *error) {
+       if (!error) {
+         self.userNameLabel.text = user.name;
+         [self.userNameLabel setFont:[UIFont boldSystemFontOfSize:16]];
+         self.userProfileImage.profileID = user.id;
+         self.userBirthdayLabel.text = user.birthday;
+         NSLog(@"%@", user.birthday);
+       }
+     }];
+  }
+}
+
+- (void)sessionStateChanged:(NSNotification*)notification {
+  [self populateUserDetails];
+}
+
+- (void)logoutButtonWasPressed:(id)sender {
   [FBSession.activeSession closeAndClearTokenInformation];
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
+- (IBAction)addGiftButton:(id)sender {
+  UIImagePickerController *libraryPicker = [[UIImagePickerController alloc] init];
+  libraryPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+  libraryPicker.delegate = self;
+  libraryPicker.allowsEditing = YES;
+  [self presentModalViewController:libraryPicker animated:NO];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  
+  if (FBSession.activeSession.isOpen) {
+    [self populateUserDetails];
+  }
+  
+  [self.userProfileImage.layer setBorderColor: [[UIColor whiteColor] CGColor]];
+  [self.userProfileImage.layer setBorderWidth: 2.0];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+  [self dismissModalViewControllerAnimated:NO];
+  
+}
+
+- (void)viewDidUnload {
+  [super viewDidUnload];
     // Release any retained subviews of the main view.
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

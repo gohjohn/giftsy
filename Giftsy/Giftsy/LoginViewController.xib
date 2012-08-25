@@ -37,13 +37,13 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUIImageView" id="532772761">
+					<object class="IBUIImageView" id="731969675">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrameSize">{320, 460}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="868450929"/>
+						<reference key="NSNextKeyView" ref="423820991"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -52,19 +52,19 @@
 							<string key="NSResourceName">login-bg@2x.png</string>
 						</object>
 					</object>
-					<object class="IBUIActivityIndicatorView" id="152117560">
+					<object class="IBUIActivityIndicatorView" id="792273842">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">-2147483356</int>
 						<string key="NSFrame">{{150, 220}, {20, 20}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="39586348"/>
+						<reference key="NSNextKeyView" ref="713094498"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIStyle">2</int>
 					</object>
-					<object class="IBUIButton" id="39586348">
+					<object class="IBUIButton" id="713094498">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{45, 339.5}, {230, 56}}</string>
@@ -103,26 +103,26 @@
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
-					<object class="IBUIImageView" id="868450929">
+					<object class="IBUIImageView" id="423820991">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{40, 66}, {240, 240}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="152117560"/>
+						<reference key="NSNextKeyView" ref="792273842"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">final-icon.png</string>
+							<string key="NSResourceName">login-icon@2x.png</string>
 						</object>
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="532772761"/>
+				<reference key="NSNextKeyView" ref="731969675"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
@@ -147,7 +147,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">performLogin:</string>
-						<reference key="source" ref="39586348"/>
+						<reference key="source" ref="713094498"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -166,10 +166,10 @@
 						<int key="objectID">1</int>
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="152117560"/>
-							<reference ref="39586348"/>
-							<reference ref="868450929"/>
-							<reference ref="532772761"/>
+							<reference ref="792273842"/>
+							<reference ref="713094498"/>
+							<reference ref="423820991"/>
+							<reference ref="731969675"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -186,22 +186,22 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">4</int>
-						<reference key="object" ref="152117560"/>
+						<reference key="object" ref="792273842"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">5</int>
-						<reference key="object" ref="39586348"/>
+						<reference key="object" ref="713094498"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">7</int>
-						<reference key="object" ref="868450929"/>
+						<reference key="object" ref="423820991"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">8</int>
-						<reference key="object" ref="532772761"/>
+						<reference key="object" ref="731969675"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
@@ -267,8 +267,8 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="button-fb-login@2x.png">{461, 112}</string>
-			<string key="final-icon.png">{16, 16}</string>
 			<string key="login-bg@2x.png">{640, 920}</string>
+			<string key="login-icon@2x.png">{400, 400}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">1498</string>
 	</data>
