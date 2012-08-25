@@ -7,6 +7,7 @@
 //
 
 #import "ConnectionController.h"
+#import "Profile.h"
 @interface ConnectionController(){
     
 }
@@ -15,6 +16,7 @@
 @end
 
 @implementation ConnectionController
+
 
 
 - (NSData*)postToServer:(NSString *)url content:(NSData*)content{
@@ -41,6 +43,14 @@
 }
 
 
+- (Profile *)getProfile:(int)userid{
+    NSString *param = [NSString stringWithFormat: @"fb_id=%d",userid];
+    NSData *dataToSend = [param dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *profileData = [self postToServer:@"http://giftsy.co/giftapi/getprofile.php" content:dataToSend];
+    NSString *string = [[NSString alloc] initWithData:profileData encoding:NSUTF8StringEncoding];
+    NSLog(@"%@",string);
+    return nil;
+}
 
 static ConnectionController *sharedInstance = nil;
 + (ConnectionController *)sharedInstance {
@@ -55,6 +65,8 @@ static ConnectionController *sharedInstance = nil;
     
     return sharedInstance;
 }
+
+
 
 - (id)init
 {
