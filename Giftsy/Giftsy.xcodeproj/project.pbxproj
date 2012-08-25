@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D763F9215E893BC007474B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D763F9115E893BC007474B1 /* UIKit.framework */; };
+		6D763F9415E893BC007474B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D763F9315E893BC007474B1 /* Foundation.framework */; };
+		6D763F9615E893BC007474B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D763F9515E893BC007474B1 /* CoreGraphics.framework */; };
+		6D763F9C15E893BC007474B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D763F9A15E893BC007474B1 /* InfoPlist.strings */; };
+		6D763F9E15E893BC007474B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D763F9D15E893BC007474B1 /* main.m */; };
+		6D763FA215E893BC007474B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D763FA115E893BC007474B1 /* AppDelegate.m */; };
+		6D763FA515E893BC007474B1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D763FA415E893BC007474B1 /* ViewController.m */; };
+		6D763FA815E893BD007474B1 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D763FA615E893BD007474B1 /* ViewController.xib */; };
+		6D763FB015E893BE007474B1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D763FAF15E893BE007474B1 /* SenTestingKit.framework */; };
+		6D763FB115E893BE007474B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D763F9115E893BC007474B1 /* UIKit.framework */; };
+		6D763FB215E893BE007474B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D763F9315E893BC007474B1 /* Foundation.framework */; };
+		6D763FBA15E893BE007474B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D763FB815E893BE007474B1 /* InfoPlist.strings */; };
+		6D763FBD15E893BE007474B1 /* GiftsyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D763FBC15E893BE007474B1 /* GiftsyTests.m */; };
+		6D763FCC15E89510007474B1 /* WishFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D763FCA15E89510007474B1 /* WishFeedViewController.m */; };
+		6D763FCD15E89510007474B1 /* WishFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D763FCB15E89510007474B1 /* WishFeedViewController.xib */; };
+		6D763FD115E8953D007474B1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D763FCF15E8953D007474B1 /* ProfileViewController.m */; };
+		6D763FD215E8953D007474B1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D763FD015E8953D007474B1 /* ProfileViewController.xib */; };
+		6D763FDA15E8965A007474B1 /* WishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D763FD815E8965A007474B1 /* WishViewController.m */; };
+		6D763FDB15E8965A007474B1 /* WishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D763FD915E8965A007474B1 /* WishViewController.xib */; };
+		6D763FDF15E89D6C007474B1 /* GiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D763FDD15E89D6C007474B1 /* GiftViewController.m */; };
+		6D763FE015E89D6C007474B1 /* GiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D763FDE15E89D6C007474B1 /* GiftViewController.xib */; };
+		6D763FE415E89E0D007474B1 /* ShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D763FE215E89E0D007474B1 /* ShopViewController.m */; };
+		6D763FE515E89E0D007474B1 /* ShopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D763FE315E89E0D007474B1 /* ShopViewController.xib */; };
+		6D763FF215E8A66E007474B1 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D763FF115E8A66E007474B1 /* FacebookSDK.framework */; };
+		6D763FF415E8A6BF007474B1 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6D763FF315E8A6BF007474B1 /* FacebookSDKResources.bundle */; };
+		6D763FF815E8A948007474B1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D763FF615E8A948007474B1 /* LoginViewController.m */; };
+		6D763FF915E8A948007474B1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D763FF715E8A948007474B1 /* LoginViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6D763FB315E893BE007474B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D763F8415E893BB007474B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D763F8C15E893BC007474B1;
+			remoteInfo = Giftsy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6D763F8D15E893BC007474B1 /* Giftsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giftsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D763F9115E893BC007474B1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6D763F9315E893BC007474B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6D763F9515E893BC007474B1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6D763F9915E893BC007474B1 /* Giftsy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Giftsy-Info.plist"; sourceTree = "<group>"; };
+		6D763F9B15E893BC007474B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6D763F9D15E893BC007474B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6D763F9F15E893BC007474B1 /* Giftsy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Giftsy-Prefix.pch"; sourceTree = "<group>"; };
+		6D763FA015E893BC007474B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6D763FA115E893BC007474B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6D763FA315E893BC007474B1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6D763FA415E893BC007474B1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6D763FA715E893BD007474B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		6D763FAE15E893BE007474B1 /* GiftsyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiftsyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D763FAF15E893BE007474B1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		6D763FB715E893BE007474B1 /* GiftsyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GiftsyTests-Info.plist"; sourceTree = "<group>"; };
+		6D763FB915E893BE007474B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6D763FBB15E893BE007474B1 /* GiftsyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GiftsyTests.h; sourceTree = "<group>"; };
+		6D763FBC15E893BE007474B1 /* GiftsyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiftsyTests.m; sourceTree = "<group>"; };
+		6D763FC915E89510007474B1 /* WishFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishFeedViewController.h; sourceTree = "<group>"; };
+		6D763FCA15E89510007474B1 /* WishFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishFeedViewController.m; sourceTree = "<group>"; };
+		6D763FCB15E89510007474B1 /* WishFeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WishFeedViewController.xib; sourceTree = "<group>"; };
+		6D763FCE15E8953D007474B1 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		6D763FCF15E8953D007474B1 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		6D763FD015E8953D007474B1 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		6D763FD715E8965A007474B1 /* WishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishViewController.h; sourceTree = "<group>"; };
+		6D763FD815E8965A007474B1 /* WishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishViewController.m; sourceTree = "<group>"; };
+		6D763FD915E8965A007474B1 /* WishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WishViewController.xib; sourceTree = "<group>"; };
+		6D763FDC15E89D6C007474B1 /* GiftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftViewController.h; sourceTree = "<group>"; };
+		6D763FDD15E89D6C007474B1 /* GiftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftViewController.m; sourceTree = "<group>"; };
+		6D763FDE15E89D6C007474B1 /* GiftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftViewController.xib; sourceTree = "<group>"; };
+		6D763FE115E89E0D007474B1 /* ShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopViewController.h; sourceTree = "<group>"; };
+		6D763FE215E89E0D007474B1 /* ShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopViewController.m; sourceTree = "<group>"; };
+		6D763FE315E89E0D007474B1 /* ShopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopViewController.xib; sourceTree = "<group>"; };
+		6D763FF115E8A66E007474B1 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		6D763FF315E8A6BF007474B1 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		6D763FF515E8A948007474B1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		6D763FF615E8A948007474B1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		6D763FF715E8A948007474B1 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D763F8A15E893BC007474B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D763F9215E893BC007474B1 /* UIKit.framework in Frameworks */,
+				6D763F9415E893BC007474B1 /* Foundation.framework in Frameworks */,
+				6D763F9615E893BC007474B1 /* CoreGraphics.framework in Frameworks */,
+				6D763FF215E8A66E007474B1 /* FacebookSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D763FAA15E893BE007474B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D763FB015E893BE007474B1 /* SenTestingKit.framework in Frameworks */,
+				6D763FB115E893BE007474B1 /* UIKit.framework in Frameworks */,
+				6D763FB215E893BE007474B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D763F8215E893BA007474B1 = {
+			isa = PBXGroup;
+			children = (
+				6D763F9715E893BC007474B1 /* Giftsy */,
+				6D763FB515E893BE007474B1 /* GiftsyTests */,
+				6D763F9015E893BC007474B1 /* Frameworks */,
+				6D763F8E15E893BC007474B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6D763F8E15E893BC007474B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D763F8D15E893BC007474B1 /* Giftsy.app */,
+				6D763FAE15E893BE007474B1 /* GiftsyTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D763F9015E893BC007474B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D763FF315E8A6BF007474B1 /* FacebookSDKResources.bundle */,
+				6D763FF115E8A66E007474B1 /* FacebookSDK.framework */,
+				6D763F9115E893BC007474B1 /* UIKit.framework */,
+				6D763F9315E893BC007474B1 /* Foundation.framework */,
+				6D763F9515E893BC007474B1 /* CoreGraphics.framework */,
+				6D763FAF15E893BE007474B1 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D763F9715E893BC007474B1 /* Giftsy */ = {
+			isa = PBXGroup;
+			children = (
+				6D763FA015E893BC007474B1 /* AppDelegate.h */,
+				6D763FA115E893BC007474B1 /* AppDelegate.m */,
+				6D763FCE15E8953D007474B1 /* ProfileViewController.h */,
+				6D763FCF15E8953D007474B1 /* ProfileViewController.m */,
+				6D763FD015E8953D007474B1 /* ProfileViewController.xib */,
+				6D763FDC15E89D6C007474B1 /* GiftViewController.h */,
+				6D763FDD15E89D6C007474B1 /* GiftViewController.m */,
+				6D763FDE15E89D6C007474B1 /* GiftViewController.xib */,
+				6D763FF515E8A948007474B1 /* LoginViewController.h */,
+				6D763FF615E8A948007474B1 /* LoginViewController.m */,
+				6D763FF715E8A948007474B1 /* LoginViewController.xib */,
+				6D763FE115E89E0D007474B1 /* ShopViewController.h */,
+				6D763FE215E89E0D007474B1 /* ShopViewController.m */,
+				6D763FE315E89E0D007474B1 /* ShopViewController.xib */,
+				6D763FC915E89510007474B1 /* WishFeedViewController.h */,
+				6D763FCA15E89510007474B1 /* WishFeedViewController.m */,
+				6D763FCB15E89510007474B1 /* WishFeedViewController.xib */,
+				6D763FD715E8965A007474B1 /* WishViewController.h */,
+				6D763FD815E8965A007474B1 /* WishViewController.m */,
+				6D763FD915E8965A007474B1 /* WishViewController.xib */,
+				6D763FA315E893BC007474B1 /* ViewController.h */,
+				6D763FA415E893BC007474B1 /* ViewController.m */,
+				6D763FA615E893BD007474B1 /* ViewController.xib */,
+				6D763F9815E893BC007474B1 /* Supporting Files */,
+			);
+			path = Giftsy;
+			sourceTree = "<group>";
+		};
+		6D763F9815E893BC007474B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D763F9915E893BC007474B1 /* Giftsy-Info.plist */,
+				6D763F9A15E893BC007474B1 /* InfoPlist.strings */,
+				6D763F9D15E893BC007474B1 /* main.m */,
+				6D763F9F15E893BC007474B1 /* Giftsy-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6D763FB515E893BE007474B1 /* GiftsyTests */ = {
+			isa = PBXGroup;
+			children = (
+				6D763FBB15E893BE007474B1 /* GiftsyTests.h */,
+				6D763FBC15E893BE007474B1 /* GiftsyTests.m */,
+				6D763FB615E893BE007474B1 /* Supporting Files */,
+			);
+			path = GiftsyTests;
+			sourceTree = "<group>";
+		};
+		6D763FB615E893BE007474B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D763FB715E893BE007474B1 /* GiftsyTests-Info.plist */,
+				6D763FB815E893BE007474B1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D763F8C15E893BC007474B1 /* Giftsy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D763FC015E893BE007474B1 /* Build configuration list for PBXNativeTarget "Giftsy" */;
+			buildPhases = (
+				6D763F8915E893BC007474B1 /* Sources */,
+				6D763F8A15E893BC007474B1 /* Frameworks */,
+				6D763F8B15E893BC007474B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Giftsy;
+			productName = Giftsy;
+			productReference = 6D763F8D15E893BC007474B1 /* Giftsy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6D763FAD15E893BE007474B1 /* GiftsyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D763FC315E893BE007474B1 /* Build configuration list for PBXNativeTarget "GiftsyTests" */;
+			buildPhases = (
+				6D763FA915E893BE007474B1 /* Sources */,
+				6D763FAA15E893BE007474B1 /* Frameworks */,
+				6D763FAB15E893BE007474B1 /* Resources */,
+				6D763FAC15E893BE007474B1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D763FB415E893BE007474B1 /* PBXTargetDependency */,
+			);
+			name = GiftsyTests;
+			productName = GiftsyTests;
+			productReference = 6D763FAE15E893BE007474B1 /* GiftsyTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D763F8415E893BB007474B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = YangShun;
+			};
+			buildConfigurationList = 6D763F8715E893BC007474B1 /* Build configuration list for PBXProject "Giftsy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6D763F8215E893BA007474B1;
+			productRefGroup = 6D763F8E15E893BC007474B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D763F8C15E893BC007474B1 /* Giftsy */,
+				6D763FAD15E893BE007474B1 /* GiftsyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D763F8B15E893BC007474B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D763F9C15E893BC007474B1 /* InfoPlist.strings in Resources */,
+				6D763FA815E893BD007474B1 /* ViewController.xib in Resources */,
+				6D763FCD15E89510007474B1 /* WishFeedViewController.xib in Resources */,
+				6D763FD215E8953D007474B1 /* ProfileViewController.xib in Resources */,
+				6D763FDB15E8965A007474B1 /* WishViewController.xib in Resources */,
+				6D763FE015E89D6C007474B1 /* GiftViewController.xib in Resources */,
+				6D763FE515E89E0D007474B1 /* ShopViewController.xib in Resources */,
+				6D763FF415E8A6BF007474B1 /* FacebookSDKResources.bundle in Resources */,
+				6D763FF915E8A948007474B1 /* LoginViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D763FAB15E893BE007474B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D763FBA15E893BE007474B1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6D763FAC15E893BE007474B1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D763F8915E893BC007474B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D763F9E15E893BC007474B1 /* main.m in Sources */,
+				6D763FA215E893BC007474B1 /* AppDelegate.m in Sources */,
+				6D763FA515E893BC007474B1 /* ViewController.m in Sources */,
+				6D763FCC15E89510007474B1 /* WishFeedViewController.m in Sources */,
+				6D763FD115E8953D007474B1 /* ProfileViewController.m in Sources */,
+				6D763FDA15E8965A007474B1 /* WishViewController.m in Sources */,
+				6D763FDF15E89D6C007474B1 /* GiftViewController.m in Sources */,
+				6D763FE415E89E0D007474B1 /* ShopViewController.m in Sources */,
+				6D763FF815E8A948007474B1 /* LoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D763FA915E893BE007474B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D763FBD15E893BE007474B1 /* GiftsyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6D763FB415E893BE007474B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D763F8C15E893BC007474B1 /* Giftsy */;
+			targetProxy = 6D763FB315E893BE007474B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6D763F9A15E893BC007474B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D763F9B15E893BC007474B1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6D763FA615E893BD007474B1 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D763FA715E893BD007474B1 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+		6D763FB815E893BE007474B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D763FB915E893BE007474B1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6D763FBE15E893BE007474B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6D763FBF15E893BE007474B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D763FC115E893BE007474B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Giftsy/Giftsy-Prefix.pch";
+				INFOPLIST_FILE = "Giftsy/Giftsy-Info.plist";
+				OTHER_LDFLAGS = "-lsqlite3.0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6D763FC215E893BE007474B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Giftsy/Giftsy-Prefix.pch";
+				INFOPLIST_FILE = "Giftsy/Giftsy-Info.plist";
+				OTHER_LDFLAGS = "-lsqlite3.0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6D763FC415E893BE007474B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Giftsy.app/Giftsy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Giftsy/Giftsy-Prefix.pch";
+				INFOPLIST_FILE = "GiftsyTests/GiftsyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		6D763FC515E893BE007474B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Giftsy.app/Giftsy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Giftsy/Giftsy-Prefix.pch";
+				INFOPLIST_FILE = "GiftsyTests/GiftsyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D763F8715E893BC007474B1 /* Build configuration list for PBXProject "Giftsy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D763FBE15E893BE007474B1 /* Debug */,
+				6D763FBF15E893BE007474B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D763FC015E893BE007474B1 /* Build configuration list for PBXNativeTarget "Giftsy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D763FC115E893BE007474B1 /* Debug */,
+				6D763FC215E893BE007474B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6D763FC315E893BE007474B1 /* Build configuration list for PBXNativeTarget "GiftsyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D763FC415E893BE007474B1 /* Debug */,
+				6D763FC515E893BE007474B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6D763F8415E893BB007474B1 /* Project object */;
+}
