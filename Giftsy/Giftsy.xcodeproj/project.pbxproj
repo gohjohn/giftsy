@@ -58,6 +58,9 @@
 		6D76400615E8BD0A007474B1 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76400415E8BD0A007474B1 /* icon@2x.png */; };
 		6D76400915E8C050007474B1 /* login-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76400715E8C050007474B1 /* login-icon.png */; };
 		6D76400A15E8C050007474B1 /* login-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D76400815E8C050007474B1 /* login-icon@2x.png */; };
+		B887414915E941D300E8ADC8 /* ConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = B887414815E941D300E8ADC8 /* ConnectionController.m */; };
+		B887415115E94F2600E8ADC8 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = B887415015E94F2600E8ADC8 /* Profile.m */; };
+		B887415415E9500400E8ADC8 /* Wish.m in Sources */ = {isa = PBXBuildFile; fileRef = B887415315E9500400E8ADC8 /* Wish.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +137,12 @@
 		6D76400415E8BD0A007474B1 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		6D76400715E8C050007474B1 /* login-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-icon.png"; sourceTree = "<group>"; };
 		6D76400815E8C050007474B1 /* login-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-icon@2x.png"; sourceTree = "<group>"; };
+		B887414715E941D300E8ADC8 /* ConnectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionController.h; sourceTree = "<group>"; };
+		B887414815E941D300E8ADC8 /* ConnectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionController.m; sourceTree = "<group>"; };
+		B887414F15E94F2600E8ADC8 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		B887415015E94F2600E8ADC8 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
+		B887415215E9500400E8ADC8 /* Wish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wish.h; sourceTree = "<group>"; };
+		B887415315E9500400E8ADC8 /* Wish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wish.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +249,12 @@
 				6D763FA615E893BD007474B1 /* ViewController.xib */,
 				6D763FFE15E8BA61007474B1 /* Images */,
 				6D763F9815E893BC007474B1 /* Supporting Files */,
+				B887414715E941D300E8ADC8 /* ConnectionController.h */,
+				B887414815E941D300E8ADC8 /* ConnectionController.m */,
+				B887414F15E94F2600E8ADC8 /* Profile.h */,
+				B887415015E94F2600E8ADC8 /* Profile.m */,
+				B887415215E9500400E8ADC8 /* Wish.h */,
+				B887415315E9500400E8ADC8 /* Wish.m */,
 			);
 			path = Giftsy;
 			sourceTree = "<group>";
@@ -438,6 +453,9 @@
 				6D763FDF15E89D6C007474B1 /* GiftViewController.m in Sources */,
 				6D763FE415E89E0D007474B1 /* ShopViewController.m in Sources */,
 				6D763FF815E8A948007474B1 /* LoginViewController.m in Sources */,
+				B887414915E941D300E8ADC8 /* ConnectionController.m in Sources */,
+				B887415115E94F2600E8ADC8 /* Profile.m in Sources */,
+				B887415415E9500400E8ADC8 /* Wish.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
