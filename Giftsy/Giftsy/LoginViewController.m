@@ -10,9 +10,14 @@
 
 @interface LoginViewController ()
 
+- (IBAction)performLogin:(id)sender;
+
+
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @end
 
 @implementation LoginViewController
+@synthesize spinner;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +32,20 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (IBAction)performLogin:(id)sender {
+  [self.spinner startAnimating];
+  
+  AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+  [appDelegate openSession];
+}
+
+- (void)loginFailed
+{
+  // User switched back to the app without authorizing. Stay here, but
+  // stop the spinner.
+  [self.spinner stopAnimating];
 }
 
 - (void)viewDidUnload

@@ -18,6 +18,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
+                                            initWithTitle:@"Logout"
+                                            style:UIBarButtonItemStyleBordered
+                                            target:self
+                                            action:@selector(logoutButtonWasPressed:)];
+}
+
+-(void)logoutButtonWasPressed:(id)sender {
+  [FBSession.activeSession closeAndClearTokenInformation];
 }
 
 - (void)viewDidUnload
