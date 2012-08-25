@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import  <QuartzCore/QuartzCore.h>
 
-@interface WishViewController : UIViewController
+@interface WishViewController : UIViewController {
+  IBOutlet UIImageView *wishImageView;
+  IBOutlet UITextField *name;
+  IBOutlet UITextField *where;
+  IBOutlet UITextField *price;
+}
+
+@property (strong, nonatomic) UIImage *wishImage;
 
 @end

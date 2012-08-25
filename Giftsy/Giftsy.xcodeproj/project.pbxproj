@@ -22,8 +22,16 @@
 		6D6C505015E93F8900A68828 /* UIImage+Filtrr.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C504615E93F6200A68828 /* UIImage+Filtrr.m */; };
 		6D6C505115E93F8900A68828 /* UIImage+FiltrrCompositions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C504815E93F6200A68828 /* UIImage+FiltrrCompositions.m */; };
 		6D6C505215E93F8900A68828 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C504A15E93F6200A68828 /* UIImage+Scale.m */; };
-		6D6C505515E93FA300A68828 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C505415E93FA300A68828 /* FilterViewController.m */; };
-		6D6C505615E93FB100A68828 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C505415E93FA300A68828 /* FilterViewController.m */; };
+		6D6C505A15E9438200A68828 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C505815E9438200A68828 /* FilterViewController.m */; };
+		6D6C505B15E9438200A68828 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D6C505915E9438200A68828 /* FilterViewController.xib */; };
+		6D6C505C15E944B600A68828 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C505815E9438200A68828 /* FilterViewController.m */; };
+		6D6C505E15E9484200A68828 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D6C505D15E9484200A68828 /* bg.png */; };
+		6D6C506015E94A4C00A68828 /* wish-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D6C505F15E94A4C00A68828 /* wish-bg@2x.png */; };
+		6D6C506315E94B5D00A68828 /* button-wish.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D6C506115E94B5D00A68828 /* button-wish.png */; };
+		6D6C506415E94B5D00A68828 /* button-wish@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D6C506215E94B5D00A68828 /* button-wish@2x.png */; };
+		6D6C506B15E9536D00A68828 /* nav-bar-image-new.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D6C506915E9536D00A68828 /* nav-bar-image-new.png */; };
+		6D6C506C15E9536D00A68828 /* nav-bar-image-new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D6C506A15E9536D00A68828 /* nav-bar-image-new@2x.png */; };
+		6D6C506F15E9572E00A68828 /* YSWishItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C506E15E9572E00A68828 /* YSWishItem.m */; };
 		6D763F9215E893BC007474B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D763F9115E893BC007474B1 /* UIKit.framework */; };
 		6D763F9415E893BC007474B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D763F9315E893BC007474B1 /* Foundation.framework */; };
 		6D763F9615E893BC007474B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D763F9515E893BC007474B1 /* CoreGraphics.framework */; };
@@ -89,8 +97,17 @@
 		6D6C504815E93F6200A68828 /* UIImage+FiltrrCompositions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+FiltrrCompositions.m"; path = "../UIImage+FiltrrCompositions.m"; sourceTree = "<group>"; };
 		6D6C504915E93F6200A68828 /* UIImage+Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Scale.h"; path = "../UIImage+Scale.h"; sourceTree = "<group>"; };
 		6D6C504A15E93F6200A68828 /* UIImage+Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Scale.m"; path = "../UIImage+Scale.m"; sourceTree = "<group>"; };
-		6D6C505315E93FA300A68828 /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
-		6D6C505415E93FA300A68828 /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
+		6D6C505715E9438200A68828 /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilterViewController.h; path = ../FilterViewController.h; sourceTree = "<group>"; };
+		6D6C505815E9438200A68828 /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilterViewController.m; path = ../FilterViewController.m; sourceTree = "<group>"; };
+		6D6C505915E9438200A68828 /* FilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilterViewController.xib; path = ../FilterViewController.xib; sourceTree = "<group>"; };
+		6D6C505D15E9484200A68828 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		6D6C505F15E94A4C00A68828 /* wish-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wish-bg@2x.png"; sourceTree = "<group>"; };
+		6D6C506115E94B5D00A68828 /* button-wish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-wish.png"; sourceTree = "<group>"; };
+		6D6C506215E94B5D00A68828 /* button-wish@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-wish@2x.png"; sourceTree = "<group>"; };
+		6D6C506915E9536D00A68828 /* nav-bar-image-new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav-bar-image-new.png"; sourceTree = "<group>"; };
+		6D6C506A15E9536D00A68828 /* nav-bar-image-new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav-bar-image-new@2x.png"; sourceTree = "<group>"; };
+		6D6C506D15E9572E00A68828 /* YSWishItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSWishItem.h; sourceTree = "<group>"; };
+		6D6C506E15E9572E00A68828 /* YSWishItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSWishItem.m; sourceTree = "<group>"; };
 		6D763F8D15E893BC007474B1 /* Giftsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giftsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D763F9115E893BC007474B1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6D763F9315E893BC007474B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -224,8 +241,9 @@
 			children = (
 				6D763FA015E893BC007474B1 /* AppDelegate.h */,
 				6D763FA115E893BC007474B1 /* AppDelegate.m */,
-				6D6C505315E93FA300A68828 /* FilterViewController.h */,
-				6D6C505415E93FA300A68828 /* FilterViewController.m */,
+				6D6C505715E9438200A68828 /* FilterViewController.h */,
+				6D6C505815E9438200A68828 /* FilterViewController.m */,
+				6D6C505915E9438200A68828 /* FilterViewController.xib */,
 				6D763FCE15E8953D007474B1 /* ProfileViewController.h */,
 				6D763FCF15E8953D007474B1 /* ProfileViewController.m */,
 				6D763FD015E8953D007474B1 /* ProfileViewController.xib */,
@@ -247,6 +265,8 @@
 				6D763FA315E893BC007474B1 /* ViewController.h */,
 				6D763FA415E893BC007474B1 /* ViewController.m */,
 				6D763FA615E893BD007474B1 /* ViewController.xib */,
+				6D6C506D15E9572E00A68828 /* YSWishItem.h */,
+				6D6C506E15E9572E00A68828 /* YSWishItem.m */,
 				6D763FFE15E8BA61007474B1 /* Images */,
 				6D763F9815E893BC007474B1 /* Supporting Files */,
 				B887414715E941D300E8ADC8 /* ConnectionController.h */,
@@ -292,6 +312,9 @@
 		6D763FFE15E8BA61007474B1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6D6C505D15E9484200A68828 /* bg.png */,
+				6D6C506115E94B5D00A68828 /* button-wish.png */,
+				6D6C506215E94B5D00A68828 /* button-wish@2x.png */,
 				6D0908A415E93B740010616A /* button-add-wish.png */,
 				6D0908A515E93B740010616A /* button-add-wish@2x.png */,
 				6D0908A615E93B740010616A /* button-fb-share.png */,
@@ -300,6 +323,8 @@
 				6D37734915E9317800A4097A /* profile-bg@2x.png */,
 				6D37734615E92EE700A4097A /* nav-bar-image.png */,
 				6D37734315E92DCC00A4097A /* nav-bar-image@2x.png */,
+				6D6C506915E9536D00A68828 /* nav-bar-image-new.png */,
+				6D6C506A15E9536D00A68828 /* nav-bar-image-new@2x.png */,
 				6D76400715E8C050007474B1 /* login-icon.png */,
 				6D76400815E8C050007474B1 /* login-icon@2x.png */,
 				6D76400315E8BD0A007474B1 /* icon.png */,
@@ -307,6 +332,7 @@
 				6D763FFA15E8BA5B007474B1 /* button-fb-login@2x.png */,
 				6D763FFF15E8BAD5007474B1 /* login-bg@2x.png */,
 				6D76400115E8BB2D007474B1 /* final-icon@2x.png */,
+				6D6C505F15E94A4C00A68828 /* wish-bg@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -406,6 +432,12 @@
 				6D0908A915E93B740010616A /* button-add-wish@2x.png in Resources */,
 				6D0908AA15E93B740010616A /* button-fb-share.png in Resources */,
 				6D0908AB15E93B740010616A /* button-fb-share@2x.png in Resources */,
+				6D6C505E15E9484200A68828 /* bg.png in Resources */,
+				6D6C506015E94A4C00A68828 /* wish-bg@2x.png in Resources */,
+				6D6C506315E94B5D00A68828 /* button-wish.png in Resources */,
+				6D6C506415E94B5D00A68828 /* button-wish@2x.png in Resources */,
+				6D6C506B15E9536D00A68828 /* nav-bar-image-new.png in Resources */,
+				6D6C506C15E9536D00A68828 /* nav-bar-image-new@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D763FBA15E893BE007474B1 /* InfoPlist.strings in Resources */,
+				6D6C505B15E9438200A68828 /* FilterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D6C505615E93FB100A68828 /* FilterViewController.m in Sources */,
+				6D6C505C15E944B600A68828 /* FilterViewController.m in Sources */,
 				6D6C505015E93F8900A68828 /* UIImage+Filtrr.m in Sources */,
 				6D6C505115E93F8900A68828 /* UIImage+FiltrrCompositions.m in Sources */,
 				6D6C505215E93F8900A68828 /* UIImage+Scale.m in Sources */,
@@ -453,9 +486,13 @@
 				6D763FDF15E89D6C007474B1 /* GiftViewController.m in Sources */,
 				6D763FE415E89E0D007474B1 /* ShopViewController.m in Sources */,
 				6D763FF815E8A948007474B1 /* LoginViewController.m in Sources */,
+
 				B887414915E941D300E8ADC8 /* ConnectionController.m in Sources */,
 				B887415115E94F2600E8ADC8 /* Profile.m in Sources */,
 				B887415415E9500400E8ADC8 /* Wish.m in Sources */,
+
+				6D6C506F15E9572E00A68828 /* YSWishItem.m in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,7 +504,7 @@
 				6D6C504B15E93F6200A68828 /* UIImage+Filtrr.m in Sources */,
 				6D6C504C15E93F6200A68828 /* UIImage+FiltrrCompositions.m in Sources */,
 				6D6C504D15E93F6200A68828 /* UIImage+Scale.m in Sources */,
-				6D6C505515E93FA300A68828 /* FilterViewController.m in Sources */,
+				6D6C505A15E9438200A68828 /* FilterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

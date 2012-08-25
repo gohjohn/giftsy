@@ -9,8 +9,16 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import "AppDelegate.h"
-#import <QuartzCore/QuartzCore.h> 
+#import <QuartzCore/QuartzCore.h>
+#import "FilterViewController.h"
+#import "WishViewController.h"
+#import "YSWishItem.h"
 
-@interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface ViewController : UIViewController <UINavigationControllerDelegate,
+UIImagePickerControllerDelegate> {
+  NSMutableArray *wishArray;
+}
+
+- (void)addWishItem:(YSWishItem*)item;
 
 @end
