@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
-
 @interface YSWishItem : UIView {
   UILabel *nameLabel;
   UILabel *whereLabel;

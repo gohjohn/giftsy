@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "ProfileViewController.h"
 
 @interface ViewController ()
 
@@ -184,19 +185,25 @@
   [self dismissModalViewControllerAnimated:YES];
   NSArray *friends = friendPicker.selection;
   id<FBGraphUser> friend = [friends objectAtIndex:0];
-  UIAlertView *alert = [[UIAlertView alloc]initWithTitle:friend.first_name
-                                                 message:friend.id
-                                                delegate:nil
-                                       cancelButtonTitle:@"OK"
-                                       otherButtonTitles:nil, nil];
-  [alert show];
+  ProfileViewController *pvc = [[ProfileViewController alloc] init];
+  pvc.userid = friend.id;
+  pvc.username = friend.name;
+  pvc.userbirthday = friend.birthday;
+  
+//  UIAlertView *alert = [[UIAlertView alloc]initWithTitle:friend.first_name
+//                                                 message:friend.id
+//                                                delegate:nil
+//                                       cancelButtonTitle:@"OK"
+//                                       otherButtonTitles:nil, nil];
+//  [alert show];
+  [self.navigationController pushViewController:pvc animated:NO];
 }
 
 - (IBAction)shareOnFacebook:(id)sender {
   
   NSString *message = [[NSString alloc] initWithFormat:@"I wished for a "];
   int count = 0;
-  for (YSWishItem *item in wishArray) {
+  for (YSWishItem *item in [wishList subviews]) {
     if (count > 0) {
       [message stringByAppendingString:[NSString stringWithFormat:@", " ]];
     }
