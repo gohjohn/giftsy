@@ -20,6 +20,7 @@
 UIImagePickerControllerDelegate, FBFriendPickerDelegate> {
   NSMutableArray *wishArray;
   IBOutlet UIScrollView *wishList;
+  NSString *currentid;
 }
 
 

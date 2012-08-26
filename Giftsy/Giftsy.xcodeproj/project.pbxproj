@@ -15,6 +15,16 @@
 		6D2CC88315E97DF1009D9B46 /* button-fb-friends@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D2CC88115E97DF1009D9B46 /* button-fb-friends@2x.png */; };
 		6D2CC88715E99712009D9B46 /* friend-profile-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D2CC88515E99712009D9B46 /* friend-profile-bg.png */; };
 		6D2CC88815E99712009D9B46 /* friend-profile-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D2CC88615E99712009D9B46 /* friend-profile-bg@2x.png */; };
+		6D2CC89315E9A73B009D9B46 /* bag.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6D2CC88915E9A737009D9B46 /* bag.jpeg */; };
+		6D2CC89415E9A73B009D9B46 /* bed.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6D2CC88A15E9A737009D9B46 /* bed.jpeg */; };
+		6D2CC89515E9A73B009D9B46 /* camera.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6D2CC88B15E9A738009D9B46 /* camera.jpeg */; };
+		6D2CC89615E9A73B009D9B46 /* ipad.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6D2CC88C15E9A738009D9B46 /* ipad.jpeg */; };
+		6D2CC89715E9A73B009D9B46 /* puppy.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6D2CC88D15E9A738009D9B46 /* puppy.jpeg */; };
+		6D2CC89815E9A73B009D9B46 /* robe.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6D2CC88E15E9A738009D9B46 /* robe.jpeg */; };
+		6D2CC89915E9A73B009D9B46 /* skate.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6D2CC88F15E9A73A009D9B46 /* skate.jpeg */; };
+		6D2CC89A15E9A73B009D9B46 /* sunglasses.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6D2CC89015E9A73A009D9B46 /* sunglasses.jpeg */; };
+		6D2CC89B15E9A73B009D9B46 /* tennis.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6D2CC89115E9A73A009D9B46 /* tennis.jpeg */; };
+		6D2CC89C15E9A73B009D9B46 /* watch.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6D2CC89215E9A73A009D9B46 /* watch.jpeg */; };
 		6D37734415E92DCC00A4097A /* nav-bar-image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D37734315E92DCC00A4097A /* nav-bar-image@2x.png */; };
 		6D37734715E92EE700A4097A /* nav-bar-image.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D37734615E92EE700A4097A /* nav-bar-image.png */; };
 		6D37734A15E9317800A4097A /* profile-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D37734815E9317800A4097A /* profile-bg.png */; };
@@ -94,6 +104,16 @@
 		6D2CC88115E97DF1009D9B46 /* button-fb-friends@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-fb-friends@2x.png"; sourceTree = "<group>"; };
 		6D2CC88515E99712009D9B46 /* friend-profile-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friend-profile-bg.png"; sourceTree = "<group>"; };
 		6D2CC88615E99712009D9B46 /* friend-profile-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friend-profile-bg@2x.png"; sourceTree = "<group>"; };
+		6D2CC88915E9A737009D9B46 /* bag.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bag.jpeg; sourceTree = "<group>"; };
+		6D2CC88A15E9A737009D9B46 /* bed.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bed.jpeg; sourceTree = "<group>"; };
+		6D2CC88B15E9A738009D9B46 /* camera.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camera.jpeg; sourceTree = "<group>"; };
+		6D2CC88C15E9A738009D9B46 /* ipad.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ipad.jpeg; sourceTree = "<group>"; };
+		6D2CC88D15E9A738009D9B46 /* puppy.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = puppy.jpeg; sourceTree = "<group>"; };
+		6D2CC88E15E9A738009D9B46 /* robe.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = robe.jpeg; sourceTree = "<group>"; };
+		6D2CC88F15E9A73A009D9B46 /* skate.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = skate.jpeg; sourceTree = "<group>"; };
+		6D2CC89015E9A73A009D9B46 /* sunglasses.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sunglasses.jpeg; sourceTree = "<group>"; };
+		6D2CC89115E9A73A009D9B46 /* tennis.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tennis.jpeg; sourceTree = "<group>"; };
+		6D2CC89215E9A73A009D9B46 /* watch.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = watch.jpeg; sourceTree = "<group>"; };
 		6D37734315E92DCC00A4097A /* nav-bar-image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav-bar-image@2x.png"; sourceTree = "<group>"; };
 		6D37734615E92EE700A4097A /* nav-bar-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav-bar-image.png"; sourceTree = "<group>"; };
 		6D37734815E9317800A4097A /* profile-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-bg.png"; sourceTree = "<group>"; };
@@ -196,6 +216,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D2CC89D15E9A749009D9B46 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				6D2CC88915E9A737009D9B46 /* bag.jpeg */,
+				6D2CC88A15E9A737009D9B46 /* bed.jpeg */,
+				6D2CC88B15E9A738009D9B46 /* camera.jpeg */,
+				6D2CC88C15E9A738009D9B46 /* ipad.jpeg */,
+				6D2CC88D15E9A738009D9B46 /* puppy.jpeg */,
+				6D2CC88E15E9A738009D9B46 /* robe.jpeg */,
+				6D2CC88F15E9A73A009D9B46 /* skate.jpeg */,
+				6D2CC89015E9A73A009D9B46 /* sunglasses.jpeg */,
+				6D2CC89115E9A73A009D9B46 /* tennis.jpeg */,
+				6D2CC89215E9A73A009D9B46 /* watch.jpeg */,
+			);
+			name = Items;
+			sourceTree = "<group>";
+		};
 		6D6C504F15E93F6B00A68828 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +312,7 @@
 				6D763FA615E893BD007474B1 /* ViewController.xib */,
 				6D6C506D15E9572E00A68828 /* YSWishItem.h */,
 				6D6C506E15E9572E00A68828 /* YSWishItem.m */,
+				6D2CC89D15E9A749009D9B46 /* Items */,
 				6D763FFE15E8BA61007474B1 /* Images */,
 				6D763F9815E893BC007474B1 /* Supporting Files */,
 				B887414715E941D300E8ADC8 /* ConnectionController.h */,
@@ -454,6 +492,16 @@
 				6D2CC88315E97DF1009D9B46 /* button-fb-friends@2x.png in Resources */,
 				6D2CC88715E99712009D9B46 /* friend-profile-bg.png in Resources */,
 				6D2CC88815E99712009D9B46 /* friend-profile-bg@2x.png in Resources */,
+				6D2CC89315E9A73B009D9B46 /* bag.jpeg in Resources */,
+				6D2CC89415E9A73B009D9B46 /* bed.jpeg in Resources */,
+				6D2CC89515E9A73B009D9B46 /* camera.jpeg in Resources */,
+				6D2CC89615E9A73B009D9B46 /* ipad.jpeg in Resources */,
+				6D2CC89715E9A73B009D9B46 /* puppy.jpeg in Resources */,
+				6D2CC89815E9A73B009D9B46 /* robe.jpeg in Resources */,
+				6D2CC89915E9A73B009D9B46 /* skate.jpeg in Resources */,
+				6D2CC89A15E9A73B009D9B46 /* sunglasses.jpeg in Resources */,
+				6D2CC89B15E9A73B009D9B46 /* tennis.jpeg in Resources */,
+				6D2CC89C15E9A73B009D9B46 /* watch.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

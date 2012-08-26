@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "LoginViewController.h"
 #import "ViewController.h"
-
+#import "YSWishItem.h"
 
 NSString *const SessionStateChangedNotification =
 @"app.nvc.Giftsy:SessionStateChangedNotification";
@@ -18,6 +18,7 @@ NSString *const SessionStateChangedNotification =
 
 @synthesize navController;
 @synthesize userId;
+@synthesize universalWishList;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   [FBProfilePictureView class];
@@ -31,6 +32,9 @@ NSString *const SessionStateChangedNotification =
     UIImage *image = [UIImage imageNamed:@"nav-bar-image.png"];
     [self.navController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
   }
+  
+  self.universalWishList = [[NSMutableArray alloc] init];
+  [self populateUniversalWishList];
   
   self.window.rootViewController = self.navController;
   [self.window makeKeyAndVisible];
@@ -156,6 +160,62 @@ NSString *const SessionStateChangedNotification =
 - (void)applicationWillTerminate:(UIApplication *)application
 {
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)populateUniversalWishList {
+  UIImage *img1 = [UIImage imageNamed:@"bag.jpeg"];
+  YSWishItem *item1 = [[YSWishItem alloc] initWithImage:img1
+                                                   name:@"Gucci Bag"
+                                                  where:@"Gucci Store"
+                                                  price:@"$252"
+                                                  owner:@"558978353"];
+  [item1 layoutIntoView];
+  [self.universalWishList addObject:item1];
+  
+  UIImage *img2 = [UIImage imageNamed:@"bed.jpeg"];
+  YSWishItem *item2 = [[YSWishItem alloc] initWithImage:img2
+                                                   name:@"King Size Bed"
+                                                  where:@"IKEA"
+                                                  price:@"$329"
+                                                  owner:@"558978353"];
+  [item1 layoutIntoView];
+  [self.universalWishList addObject:item2];
+  
+  UIImage *img3 = [UIImage imageNamed:@"camera.jpeg"];
+  YSWishItem *item3 = [[YSWishItem alloc] initWithImage:img3
+                                                   name:@"Vintage Camera"
+                                                  where:@"That Camera Shop"
+                                                  price:@"$729"
+                                                  owner:@"521412386"];
+  [item1 layoutIntoView];
+  [self.universalWishList addObject:item3];
+
+  UIImage *img4 = [UIImage imageNamed:@"sunglasses.jpeg"];
+  YSWishItem *item4 = [[YSWishItem alloc] initWithImage:img4
+                                                   name:@"Rayban Shades"
+                                                  where:@"Rayban Store"
+                                                  price:@"$531"
+                                                  owner:@"521412386"];
+  [item1 layoutIntoView];
+  [self.universalWishList addObject:item4];
+  
+  // 1397504181
+  
+}
+
+- (NSMutableArray*)retrieveWishesBy:(NSString*)userid {
+  
+  NSMutableArray *userWishes = [[NSMutableArray alloc] init];
+  NSLog(@"Retrieve wishes for: %@", userid);
+  NSLog(@"Number in universal: %d", [self.universalWishList count]);
+  for (YSWishItem *item in self.universalWishList) {
+    NSLog(@"item owner: %@ and name:%@", item.owner, item.name);
+    if ([item.owner isEqualToString:userid]) {
+      [userWishes addObject:item];
+    }
+  }
+  NSLog(@"Number in matching: %d", [userWishes count]);
+  return (NSMutableArray*)userWishes;
 }
 
 @end

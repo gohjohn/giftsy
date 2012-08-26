@@ -21,8 +21,6 @@
 
 @implementation ViewController
 
-@synthesize postParams;
-
 - (void)viewDidLoad {
   [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -40,7 +38,6 @@
                                              object:nil];
   
   wishArray = [[NSMutableArray alloc] init];
-
 }
 
 - (void)populateUserDetails {
@@ -53,9 +50,11 @@
          self.userNameLabel.text = user.name;
          [self.userNameLabel setFont:[UIFont boldSystemFontOfSize:16]];
          self.userProfileImage.profileID = user.id;
+         currentid = [NSString stringWithString:user.id];
          NSLog(@"User id:%@", self.userProfileImage.profileID);
          self.userBirthdayLabel.text = user.birthday;
          NSLog(@"%@", user.birthday);
+         [self loadWishItems];
          
          AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
          appDelegate.userId = self.userProfileImage.profileID;
@@ -94,7 +93,7 @@
   self.userProfileImage.layer.shadowOffset = CGSizeMake(5, 5);
   self.userProfileImage.layer.shadowRadius = 4;
   self.userProfileImage.layer.shadowOpacity = 0.5;
-  [self loadWishItems];
+
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
@@ -121,11 +120,17 @@
   if (!item) {
     NSLog(@"wish item is null");
   }
-  [wishArray addObject:item];
+  AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+  [appDelegate.universalWishList addObject:item];
   NSLog(@"wish item added");
 }
 
 - (void)loadWishItems {
+  
+  AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+  
+  wishArray = nil;
+  wishArray = [appDelegate retrieveWishesBy:currentid];
   int number = [wishArray count];
   NSLog(@"count: %d", number);
   [wishList setContentSize:CGSizeMake(300, (number * 70))];
@@ -196,12 +201,13 @@
 //                                       cancelButtonTitle:@"OK"
 //                                       otherButtonTitles:nil, nil];
 //  [alert show];
+  NSLog(@"birthday: %@", friend.birthday);
   [self.navigationController pushViewController:pvc animated:NO];
 }
 
 - (IBAction)shareOnFacebook:(id)sender {
   
-  NSString *message = [[NSString alloc] initWithFormat:@"I wished for a "];
+  NSString *message = [[NSString alloc] initWithFormat:@"I made a wish on Giftsy! "];
   int count = 0;
   for (YSWishItem *item in [wishList subviews]) {
     if (count > 0) {

@@ -12,6 +12,7 @@
 @interface ProfileViewController : UIViewController {
   NSMutableArray *wishArray;
   IBOutlet UIScrollView *wishList;
+  NSString *currentid;
 }
 
 @property (strong, nonatomic) NSString *userid;
