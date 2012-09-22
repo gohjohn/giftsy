@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface ProfileViewController : UIViewController
+@interface ProfileViewController : UIViewController {
+  NSMutableArray *wishArray;
+  IBOutlet UIScrollView *wishList;
+  NSString *currentid;
+}
+
+@property (strong, nonatomic) NSString *userid;
+@property (strong, nonatomic) NSString *username;
+@property (strong, nonatomic) NSString *userbirthday;
+
 
 @end

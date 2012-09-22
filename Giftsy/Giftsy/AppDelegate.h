@@ -17,11 +17,14 @@ extern NSString *const SCSessionStateChangedNotification;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 - (void)openSession;
+- (NSMutableArray*)retrieveWishesBy:(NSString*)userid;
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) ViewController *viewController;
 @property (strong, nonatomic) UINavigationController *navController;
+
+@property (strong, nonatomic) NSMutableArray *universalWishList;
 
 @property (strong, nonatomic) NSString *userId;
 
