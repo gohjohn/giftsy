@@ -7,6 +7,8 @@
 //
 
 #import "DrinkGameViewController.h"
+#import "MenuViewController.h"
+
 #define POST_FILE_NAME @""
 #define NO_BEER_IMGS 40
 
@@ -108,7 +110,7 @@
 }
 
 -(void)handleSwipe:(UISwipeGestureRecognizer *)recognizer {
-    NSLog(@"Swipe received.");
+//    NSLog(@"Swipe received.");
     score+=5;
     [UIView animateWithDuration:0.5
                           delay:0.0
@@ -125,7 +127,7 @@
     beerImages = [NSMutableArray array];
     for(int i=NO_BEER_IMGS-1;i>=0;i--){
         NSString* fileName = [NSString stringWithFormat:@"%d%@",i,POST_FILE_NAME];
-        NSLog(@"%@",fileName);
+//        NSLog(@"%@",fileName);
         UIImage *img = [UIImage imageNamed:fileName];
         [beerImages addObject:img];
     }
@@ -184,6 +186,8 @@
 
 - (void)yes {
   [pausevc.view removeFromSuperview];
+  MenuViewController *menuvc = [[MenuViewController alloc] init];
+  [self presentModalViewController:menuvc animated:YES];
 }
 
 - (void)no {

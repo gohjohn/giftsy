@@ -7,6 +7,7 @@
 //
 
 #import "TapGameViewController.h"
+#import "MenuViewController.h"
 
 @interface TapGameViewController ()
 
@@ -50,9 +51,12 @@
 
 - (void)yes {
   [pausevc.view removeFromSuperview];
-  CheckViewController *checkoutvc = [[CheckViewController alloc] init];
-  [checkoutvc loadItem:@"beer" Price:1010 Qn:2];
-  [self presentModalViewController:checkoutvc animated:YES];
+//  CheckViewController *checkoutvc = [[CheckViewController alloc] init];
+//  [checkoutvc loadItem:@"beer" Price:1010 Qn:2];
+//  [self presentModalViewController:checkoutvc animated:YES];
+  
+  MenuViewController *menuvc = [[MenuViewController alloc] init];
+  [self presentModalViewController:menuvc animated:YES];
 }
 
 - (void)no {
