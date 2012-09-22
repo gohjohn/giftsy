@@ -16,14 +16,19 @@
     __weak IBOutlet UIButton *btnRight;
     __weak IBOutlet UIImageView *imgDrink;
     __weak IBOutlet UILabel *lblScore;
-    __weak IBOutlet UILabel *lblSwipe;
+   __weak IBOutlet UILabel *timeLabel;
+    __weak IBOutlet UIImageView *lblSwipe;
     
+  int timeLeft;
     int turnState;
     int score;
     int turnScore;
     CGPoint originalCenter;
     NSMutableArray *beerImages;
     UISwipeGestureRecognizer *swipeLeftRight, *swipeUpDown;
+  PauseViewController *pausevc;
+  EndGameViewController *endvc;
+  NSTimer *gametimer;
 }
 
 @end
@@ -56,17 +61,37 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+  
+  pausevc = [[PauseViewController alloc] init];
+  pausevc.delegate = self;
+  
+  endvc = [[EndGameViewController alloc] init];
+  endvc.delegate = self;
+  
     score = 0;
-    
+  timeLeft = 21;
     swipeLeftRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
     [swipeLeftRight setDirection:(UISwipeGestureRecognizerDirectionRight | UISwipeGestureRecognizerDirectionLeft )];
     
     swipeUpDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
     [swipeUpDown setDirection:(UISwipeGestureRecognizerDirectionUp | UISwipeGestureRecognizerDirectionDown )];
     
-    
+  gametimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                               target:self
+                                             selector:@selector(updateTime)
+                                             userInfo:nil
+                                              repeats:YES];
     [self loadImages];
     [self nextBottle];
+}
+
+- (void)updateTime {
+  timeLeft--;
+  timeLabel.text = [NSString stringWithFormat:@"%d", timeLeft];
+  if (timeLeft == 0) {
+    [self.view addSubview:endvc.view];
+    [gametimer invalidate];
+  }
 }
 
 -(void)removeGestures{
@@ -118,7 +143,7 @@
     [lblSwipe setHidden:YES];
     [btnLeft setHidden:NO];
     [btnRight setHidden:NO];
-    NSString *strScore = [NSString stringWithFormat:@"Score: %d",score];
+    NSString *strScore = [NSString stringWithFormat:@"%d",score];
     [lblScore setText:strScore];
   
     if (turnScore>=0 && turnScore<beerImages.count){
@@ -155,6 +180,62 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+- (void)yes {
+  [pausevc.view removeFromSuperview];
+}
+
+- (void)no {
+  [pausevc.view removeFromSuperview];
+  self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+  [self dismissViewControllerAnimated:NO completion:^(void){}];
+}
+
+- (IBAction)pause:(id)sender {
+  [self.view addSubview:pausevc.view];
+  [gametimer invalidate];
+}
+
+- (void)resume {
+  gametimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                               target:self
+                                             selector:@selector(updateTime)
+                                             userInfo:nil
+                                              repeats:YES];
+  [gametimer fire];
+}
+
+- (void)restart {
+  [gametimer invalidate];
+  [pausevc.view removeFromSuperview];
+  
+  [self restartGame];
+  
+  timeLeft = 21;
+  timeLabel.text = @"21";
+  score = 0;
+  lblScore.text = @"0";
+  gametimer = nil;
+  gametimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                               target:self
+                                             selector:@selector(updateTime)
+                                             userInfo:nil
+                                              repeats:YES];
+  [gametimer fire];
+}
+
+- (void) restartGame{
+  score = 0;
+  turnScore = 0;
+  turnState = 0;
+  [self updateDisplay];
+}
+
+- (void)quit {
+  [pausevc.view removeFromSuperview];
+  self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+  [self dismissViewControllerAnimated:NO completion:^(void){}];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

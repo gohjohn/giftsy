@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PauseViewController.h"
+#import "EndGameViewController.h"
 
-@interface DrinkGameViewController : UIViewController
+@interface DrinkGameViewController : UIViewController <pauseActions, endActions>
 
 @end

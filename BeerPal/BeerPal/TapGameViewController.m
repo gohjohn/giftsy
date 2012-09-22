@@ -28,6 +28,10 @@
   [super viewDidLoad];
   pausevc = [[PauseViewController alloc] init];
   pausevc.delegate = self;
+  
+  endvc = [[EndGameViewController alloc] init];
+  endvc.delegate = self;
+  
   numberOfBeersTapped = 0;
   beerArray = [[NSMutableArray alloc] init];
   
@@ -35,7 +39,7 @@
   background.userInteractionEnabled = YES;
   [self displayBeer];
   
-  timeLeft = 20;
+  timeLeft = 21;
   gametimer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                                target:self
                                              selector:@selector(updateTime)
@@ -44,10 +48,21 @@
   [gametimer fire];
 }
 
+- (void)yes {
+  [pausevc.view removeFromSuperview];
+}
+
+- (void)no {
+  [pausevc.view removeFromSuperview];
+  self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+  [self dismissViewControllerAnimated:NO completion:^(void){}];
+}
+
 - (void)updateTime {
   timeLeft--;
   timeLabel.text = [NSString stringWithFormat:@"%d", timeLeft];
   if (timeLeft == 0) {
+    [self.view addSubview:endvc.view];
     [gametimer invalidate];
   }
 }
@@ -80,6 +95,11 @@
 }
 
 - (void)resume {
+  gametimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                               target:self
+                                             selector:@selector(updateTime)
+                                             userInfo:nil
+                                              repeats:YES];
   [gametimer fire];
 }
 
@@ -96,6 +116,7 @@
 }
 
 - (void)restart {
+  [gametimer invalidate];
   [pausevc.view removeFromSuperview];
   [self clearBeers];
   timeLeft = 21;
@@ -103,9 +124,14 @@
   numberOfBeersTapped = 0;
   scoreLabel.text = @"0";
   [self displayBeer];
+  gametimer = nil;
+  gametimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                               target:self
+                                             selector:@selector(updateTime)
+                                             userInfo:nil
+                                              repeats:YES];
+  [gametimer fire];
 }
-
-
 
 - (void)viewDidUnload
 {

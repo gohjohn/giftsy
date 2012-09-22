@@ -1,18 +1,18 @@
 //
-//  PauseViewController.m
+//  EndGameViewController.m
 //  BeerPal
 //
 //  Created by YangShun on 22/9/12.
 //  Copyright (c) 2012 YangShun. All rights reserved.
 //
 
-#import "PauseViewController.h"
+#import "EndGameViewController.h"
 
-@interface PauseViewController ()
+@interface EndGameViewController ()
 
 @end
 
-@implementation PauseViewController
+@implementation EndGameViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,17 +23,12 @@
     return self;
 }
 
-- (IBAction)resume:(id)sender {
-  [self.view removeFromSuperview];
-  [self.delegate resume];
+- (IBAction)yes {
+  [self.delegate yes];
 }
 
-- (IBAction)restart:(id)sender {
-  [self.delegate restart];
-}
-
-- (IBAction)quit:(id)sender {
-  [self.delegate quit];
+- (IBAction)no {
+  [self.delegate no];
 }
 
 - (void)viewDidLoad
