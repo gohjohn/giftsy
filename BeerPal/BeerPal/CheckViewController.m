@@ -69,11 +69,11 @@
 	PayPalPayment *payment = [[PayPalPayment alloc] init];
 	payment.recipient = @"example-merchant-1@paypal.com";
 	payment.paymentCurrency = @"USD";
-	payment.description = @"";//TODO
+	payment.description = _item;//TODO
 	payment.merchantName = @"DrinkPal";
 	
 	//subtotal of all items, without tax and shipping
-//	payment.subTotal = [NSDecimalNumber decimalNumberWithString:@"10or];//TODO
+	payment.subTotal = [NSDecimalNumber decimalNumberWithString:txtTotal];//TODO
 	
 	//invoiceData is a PayPalInvoiceData object which contains tax, shipping, and a list of PayPalInvoiceItem objects
 	payment.invoiceData = [[PayPalInvoiceData alloc] init];
@@ -108,13 +108,14 @@
   
   int totalP = qn * price + tax;
   _price = totalP;
-  txtTotal = [NSString stringWithFormat:@"$%d.%d",_price/100,_price%100];
-  
+  txtTotal = [NSString stringWithFormat:@"%d.%d",_price/100,_price%100];
+  NSString *txtTotalWDollar = [NSString stringWithFormat:@"$%d.%d",_price/100,_price%100];
+    
   [lblItem setText:txtItem];
   [lblPrice setText:txtPrice];
   [lblQuantity setText:txtQn];
   [lblTax setText:txtTax];
-  [lblTotal setText:txtTotal];
+  [lblTotal setText:txtTotalWDollar];
   
   UIButton *button = [[PayPal getPayPalInst] getPayButtonWithTarget:self andAction:@selector(simplePayment) andButtonType:BUTTON_294x43];
 
@@ -192,7 +193,6 @@
 	switch (status) {
 		case PAYMENTSTATUS_SUCCESS:
 			
-      
       
       
       //SUCCESS!!!!!!!
