@@ -8,7 +8,7 @@
 
 #import "DrinkGameViewController.h"
 #define POST_FILE_NAME @""
-#define NO_BEER_IMGS 11
+#define NO_BEER_IMGS 40
 
 @interface DrinkGameViewController (){
     
@@ -84,6 +84,7 @@
 
 -(void)handleSwipe:(UISwipeGestureRecognizer *)recognizer {
     NSLog(@"Swipe received.");
+    score+=5;
     [UIView animateWithDuration:0.5
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseOut
@@ -119,10 +120,13 @@
     [btnRight setHidden:NO];
     NSString *strScore = [NSString stringWithFormat:@"Score: %d",score];
     [lblScore setText:strScore];
-    [imgDrink setImage:[beerImages objectAtIndex:turnScore]];
+  
+    if (turnScore>=0 && turnScore<beerImages.count){
+      [imgDrink setImage:[beerImages objectAtIndex:turnScore]];
+    }
     imgDrink.center = originalCenter;
     [imgDrink setNeedsDisplay];
-    if(turnScore == NO_BEER_IMGS -1){
+    if(turnScore >= NO_BEER_IMGS -1){
         [btnLeft setHidden:YES];
         [btnRight setHidden:YES];
         [lblSwipe setHidden:NO];
