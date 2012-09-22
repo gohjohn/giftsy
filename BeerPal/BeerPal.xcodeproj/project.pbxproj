@@ -28,7 +28,6 @@
 		6DE3A769160D77960023C29D /* beer-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A768160D77950023C29D /* beer-small.png */; };
 		6DE3A77E160D89B30023C29D /* DrinkGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE3A77C160D89B30023C29D /* DrinkGameViewController.m */; };
 		6DE3A77F160D89B30023C29D /* DrinkGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A77D160D89B30023C29D /* DrinkGameViewController.xib */; };
-
 		6DE3A786160D95540023C29D /* drink-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A781160D95540023C29D /* drink-button@2x.png */; };
 		6DE3A787160D95540023C29D /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A782160D95540023C29D /* logo@2x.png */; };
 		6DE3A788160D95540023C29D /* main-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A783160D95540023C29D /* main-bg@2x.png */; };
@@ -36,6 +35,18 @@
 		6DE3A78A160D95540023C29D /* tap-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A785160D95540023C29D /* tap-button@2x.png */; };
 		6DE3A78D160D9E1A0023C29D /* tap-background-front@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A78B160D9E1A0023C29D /* tap-background-front@2x.png */; };
 		6DE3A78E160D9E1A0023C29D /* tap-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A78C160D9E1A0023C29D /* tap-background@2x.png */; };
+		6DE3A798160E40670023C29D /* score@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A793160E40670023C29D /* score@2x.png */; };
+		6DE3A799160E40670023C29D /* pause-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A794160E40670023C29D /* pause-title@2x.png */; };
+		6DE3A79A160E40670023C29D /* restart-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A795160E40670023C29D /* restart-button@2x.png */; };
+		6DE3A79B160E40670023C29D /* quit-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A796160E40670023C29D /* quit-button@2x.png */; };
+		6DE3A79C160E40670023C29D /* play-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A797160E40670023C29D /* play-button@2x.png */; };
+		6DE3A7A1160E411D0023C29D /* PauseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE3A79F160E411D0023C29D /* PauseViewController.m */; };
+		6DE3A7A2160E411D0023C29D /* PauseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A7A0160E411D0023C29D /* PauseViewController.xib */; };
+		6DE3A7A4160E42B60023C29D /* pause-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A7A3160E42B60023C29D /* pause-button@2x.png */; };
+		6DE3A7AD160E4AE80023C29D /* lose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A7A9160E4AE80023C29D /* lose@2x.png */; };
+		6DE3A7AE160E4AE80023C29D /* win@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A7AA160E4AE80023C29D /* win@2x.png */; };
+		6DE3A7AF160E4AE80023C29D /* time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A7AB160E4AE80023C29D /* time@2x.png */; };
+		6DE3A7B0160E4AE80023C29D /* score@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A7AC160E4AE80023C29D /* score@2x.png */; };
 		B8B04FF5160D8CB700B15411 /* 10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8B04FCD160D8CB700B15411 /* 10@2x.png */; };
 		B8B04FF6160D8CB700B15411 /* 11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8B04FCE160D8CB700B15411 /* 11@2x.png */; };
 		B8B04FF7160D8CB700B15411 /* 12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8B04FCF160D8CB700B15411 /* 12@2x.png */; };
@@ -76,7 +87,6 @@
 		B8B05025160D96B300B15411 /* 7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8B0501B160D96B300B15411 /* 7@2x.png */; };
 		B8B05026160D96B300B15411 /* 8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8B0501C160D96B300B15411 /* 8@2x.png */; };
 		B8B05027160D96B300B15411 /* 9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8B0501D160D96B300B15411 /* 9@2x.png */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,7 +130,6 @@
 		6DE3A77B160D89B30023C29D /* DrinkGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkGameViewController.h; sourceTree = "<group>"; };
 		6DE3A77C160D89B30023C29D /* DrinkGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkGameViewController.m; sourceTree = "<group>"; };
 		6DE3A77D160D89B30023C29D /* DrinkGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrinkGameViewController.xib; sourceTree = "<group>"; };
-
 		6DE3A781160D95540023C29D /* drink-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "drink-button@2x.png"; path = "images/drink-button@2x.png"; sourceTree = "<group>"; };
 		6DE3A782160D95540023C29D /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@2x.png"; path = "images/logo@2x.png"; sourceTree = "<group>"; };
 		6DE3A783160D95540023C29D /* main-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "main-bg@2x.png"; path = "images/main-bg@2x.png"; sourceTree = "<group>"; };
@@ -128,7 +137,19 @@
 		6DE3A785160D95540023C29D /* tap-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tap-button@2x.png"; path = "images/tap-button@2x.png"; sourceTree = "<group>"; };
 		6DE3A78B160D9E1A0023C29D /* tap-background-front@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tap-background-front@2x.png"; path = "images/tap-background-front@2x.png"; sourceTree = "<group>"; };
 		6DE3A78C160D9E1A0023C29D /* tap-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tap-background@2x.png"; path = "images/tap-background@2x.png"; sourceTree = "<group>"; };
-
+		6DE3A793160E40670023C29D /* score@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "score@2x.png"; path = "images/score@2x.png"; sourceTree = "<group>"; };
+		6DE3A794160E40670023C29D /* pause-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-title@2x.png"; path = "images/pause-title@2x.png"; sourceTree = "<group>"; };
+		6DE3A795160E40670023C29D /* restart-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "restart-button@2x.png"; path = "images/restart-button@2x.png"; sourceTree = "<group>"; };
+		6DE3A796160E40670023C29D /* quit-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "quit-button@2x.png"; path = "images/quit-button@2x.png"; sourceTree = "<group>"; };
+		6DE3A797160E40670023C29D /* play-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-button@2x.png"; path = "images/play-button@2x.png"; sourceTree = "<group>"; };
+		6DE3A79E160E411D0023C29D /* PauseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseViewController.h; sourceTree = "<group>"; };
+		6DE3A79F160E411D0023C29D /* PauseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PauseViewController.m; sourceTree = "<group>"; };
+		6DE3A7A0160E411D0023C29D /* PauseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PauseViewController.xib; sourceTree = "<group>"; };
+		6DE3A7A3160E42B60023C29D /* pause-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-button@2x.png"; path = "images/pause-button@2x.png"; sourceTree = "<group>"; };
+		6DE3A7A9160E4AE80023C29D /* lose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lose@2x.png"; path = "images/lose@2x.png"; sourceTree = "<group>"; };
+		6DE3A7AA160E4AE80023C29D /* win@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "win@2x.png"; path = "images/win@2x.png"; sourceTree = "<group>"; };
+		6DE3A7AB160E4AE80023C29D /* time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "time@2x.png"; path = "images/time@2x.png"; sourceTree = "<group>"; };
+		6DE3A7AC160E4AE80023C29D /* score@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "score@2x.png"; path = "images/score@2x.png"; sourceTree = "<group>"; };
 		B8B04FCD160D8CB700B15411 /* 10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10@2x.png"; sourceTree = "<group>"; };
 		B8B04FCE160D8CB700B15411 /* 11@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11@2x.png"; sourceTree = "<group>"; };
 		B8B04FCF160D8CB700B15411 /* 12@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12@2x.png"; sourceTree = "<group>"; };
@@ -236,6 +257,9 @@
 				6DE3A757160D6AAC0023C29D /* TapGameViewController.h */,
 				6DE3A758160D6AAC0023C29D /* TapGameViewController.m */,
 				6DE3A759160D6AAC0023C29D /* TapGameViewController.xib */,
+				6DE3A79E160E411D0023C29D /* PauseViewController.h */,
+				6DE3A79F160E411D0023C29D /* PauseViewController.m */,
+				6DE3A7A0160E411D0023C29D /* PauseViewController.xib */,
 				6DE3A761160D6F2F0023C29D /* BeerItemViewController.h */,
 				6DE3A762160D6F2F0023C29D /* BeerItemViewController.m */,
 				6DE3A77B160D89B30023C29D /* DrinkGameViewController.h */,
@@ -280,13 +304,21 @@
 		6DE3A760160D6E9B0023C29D /* Images */ = {
 			isa = PBXGroup;
 			children = (
-
+				6DE3A7A9160E4AE80023C29D /* lose@2x.png */,
+				6DE3A7AA160E4AE80023C29D /* win@2x.png */,
+				6DE3A7AB160E4AE80023C29D /* time@2x.png */,
+				6DE3A7AC160E4AE80023C29D /* score@2x.png */,
+				6DE3A7A3160E42B60023C29D /* pause-button@2x.png */,
+				6DE3A793160E40670023C29D /* score@2x.png */,
+				6DE3A794160E40670023C29D /* pause-title@2x.png */,
+				6DE3A795160E40670023C29D /* restart-button@2x.png */,
+				6DE3A796160E40670023C29D /* quit-button@2x.png */,
+				6DE3A797160E40670023C29D /* play-button@2x.png */,
 				6DE3A781160D95540023C29D /* drink-button@2x.png */,
 				6DE3A782160D95540023C29D /* logo@2x.png */,
 				6DE3A783160D95540023C29D /* main-bg@2x.png */,
 				6DE3A784160D95540023C29D /* mydrinks-button@2x.png */,
 				6DE3A785160D95540023C29D /* tap-button@2x.png */,
-
 				B8B04FC2160D8CB700B15411 /* Drinking */,
 				6DE3A768160D77950023C29D /* beer-small.png */,
 				6DE3A75C160D6E950023C29D /* background.png */,
@@ -423,7 +455,6 @@
 				6DE3A75F160D6E950023C29D /* beer.png in Resources */,
 				6DE3A769160D77960023C29D /* beer-small.png in Resources */,
 				6DE3A77F160D89B30023C29D /* DrinkGameViewController.xib in Resources */,
-
 				6DE3A786160D95540023C29D /* drink-button@2x.png in Resources */,
 				6DE3A787160D95540023C29D /* logo@2x.png in Resources */,
 				6DE3A788160D95540023C29D /* main-bg@2x.png in Resources */,
@@ -431,7 +462,6 @@
 				6DE3A78A160D95540023C29D /* tap-button@2x.png in Resources */,
 				6DE3A78D160D9E1A0023C29D /* tap-background-front@2x.png in Resources */,
 				6DE3A78E160D9E1A0023C29D /* tap-background@2x.png in Resources */,
-
 				B8B04FF5160D8CB700B15411 /* 10@2x.png in Resources */,
 				B8B04FF6160D8CB700B15411 /* 11@2x.png in Resources */,
 				B8B04FF7160D8CB700B15411 /* 12@2x.png in Resources */,
@@ -472,7 +502,17 @@
 				B8B05025160D96B300B15411 /* 7@2x.png in Resources */,
 				B8B05026160D96B300B15411 /* 8@2x.png in Resources */,
 				B8B05027160D96B300B15411 /* 9@2x.png in Resources */,
-
+				6DE3A798160E40670023C29D /* score@2x.png in Resources */,
+				6DE3A799160E40670023C29D /* pause-title@2x.png in Resources */,
+				6DE3A79A160E40670023C29D /* restart-button@2x.png in Resources */,
+				6DE3A79B160E40670023C29D /* quit-button@2x.png in Resources */,
+				6DE3A79C160E40670023C29D /* play-button@2x.png in Resources */,
+				6DE3A7A2160E411D0023C29D /* PauseViewController.xib in Resources */,
+				6DE3A7A4160E42B60023C29D /* pause-button@2x.png in Resources */,
+				6DE3A7AD160E4AE80023C29D /* lose@2x.png in Resources */,
+				6DE3A7AE160E4AE80023C29D /* win@2x.png in Resources */,
+				6DE3A7AF160E4AE80023C29D /* time@2x.png in Resources */,
+				6DE3A7B0160E4AE80023C29D /* score@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +553,7 @@
 				6DE3A75A160D6AAC0023C29D /* TapGameViewController.m in Sources */,
 				6DE3A763160D6F2F0023C29D /* BeerItemViewController.m in Sources */,
 				6DE3A77E160D89B30023C29D /* DrinkGameViewController.m in Sources */,
+				6DE3A7A1160E411D0023C29D /* PauseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

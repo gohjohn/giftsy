@@ -8,13 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "BeerItemViewController.h"
+#import "PauseViewController.h"
 
-@interface TapGameViewController : UIViewController <tapGame> {
+@interface TapGameViewController : UIViewController <tapGame, pauseActions> {
   
   NSMutableArray *beerArray;
   int numberOfBeersTapped;
   IBOutlet UILabel *scoreLabel;
   IBOutlet UIImageView *background;
+  PauseViewController *pausevc;
+  IBOutlet UILabel *timeLabel;
+  NSTimer *gametimer;
+  int timeLeft;
 }
 
 @end
