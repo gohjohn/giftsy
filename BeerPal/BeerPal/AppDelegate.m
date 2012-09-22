@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "PayPal.h"
 #import "ViewController.h"
 
 @implementation AppDelegate
@@ -16,6 +16,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+  	[PayPal initializeWithAppID:@"anything" forEnvironment:ENV_NONE];
   self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
   self.window.rootViewController = self.viewController;
   [[UIApplication sharedApplication] setStatusBarHidden:YES animated:NO];

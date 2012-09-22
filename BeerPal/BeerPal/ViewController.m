@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "TapGameViewController.h"
 #import "DrinkGameViewController.h"
+#import "CheckViewController.h"
 
 @interface ViewController ()
 
@@ -30,6 +31,12 @@
 - (IBAction)pushDrinkGame:(id)sender {
   DrinkGameViewController *drinkgamevc = [[DrinkGameViewController alloc] init];
   [self presentViewController:drinkgamevc animated:YES completion:^(void){}];
+}
+
+- (IBAction)myDrinks {
+  CheckViewController *checkoutvc = [[CheckViewController alloc] init];
+  [self presentModalViewController:checkoutvc animated:YES];
+    [checkoutvc loadItem:@"beer" Price:1010 Qn:2];
 }
 
 - (void)viewDidUnload

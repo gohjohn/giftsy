@@ -10,6 +10,7 @@
 #import "BeerItemViewController.h"
 #import "PauseViewController.h"
 #import "EndGameViewController.h"
+#import "CheckViewController.h"
 
 @interface TapGameViewController : UIViewController <tapGame, pauseActions, endActions> {
   
