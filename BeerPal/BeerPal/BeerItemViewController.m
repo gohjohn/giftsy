@@ -36,17 +36,12 @@
                         delay:0.0
                       options:UIViewAnimationOptionCurveEaseOut
                    animations:^{
-                     self.view.transform = CGAffineTransformScale(self.view.transform, 0.01, 0.01);
+                     self.view.center = CGPointMake(self.view.center.x, self.view.center.y + 50);
                    }
                    completion:^(BOOL finished){
 //                     [self.view removeFromSuperview];
                      [self.delegate increaseCount:self];
                    }];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-//  NSLog(@"view will appear");
-  self.view.transform = CGAffineTransformScale(self.view.transform, 0.01, 0.01);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -55,7 +50,7 @@
                         delay:0.0
                       options:UIViewAnimationOptionCurveEaseOut
                    animations:^{
-                     self.view.transform = CGAffineTransformScale(self.view.transform, 100.0, 100.0);
+                     self.view.center = CGPointMake(self.view.center.x, self.view.center.y - 50);
                    }
                    completion:^(BOOL finished){
                    }];

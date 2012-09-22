@@ -26,24 +26,55 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  pausevc = [[PauseViewController alloc] init];
+  pausevc.delegate = self;
+  
+  endvc = [[EndGameViewController alloc] init];
+  endvc.delegate = self;
+  
   numberOfBeersTapped = 0;
   beerArray = [[NSMutableArray alloc] init];
-  for (int i = 0; i < 5; i++) {
-  }
+  
   self.view.userInteractionEnabled = YES;
+  background.userInteractionEnabled = YES;
   [self displayBeer];
+  
+  timeLeft = 21;
+  gametimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                               target:self
+                                             selector:@selector(updateTime)
+                                             userInfo:nil
+                                              repeats:YES];
+  [gametimer fire];
+}
+
+- (void)yes {
+  [pausevc.view removeFromSuperview];
+}
+
+- (void)no {
+  [pausevc.view removeFromSuperview];
+  self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+  [self dismissViewControllerAnimated:NO completion:^(void){}];
+}
+
+- (void)updateTime {
+  timeLeft--;
+  timeLabel.text = [NSString stringWithFormat:@"%d", timeLeft];
+  if (timeLeft == 0) {
+    [self.view addSubview:endvc.view];
+    [gametimer invalidate];
+  }
 }
 
 - (void)displayBeer {
   for (int i = 0; i < 5; i++) {
-    
     BeerItemViewController *beervc = [[BeerItemViewController alloc] init];
     beervc.delegate = self;
     [beerArray addObject:beervc];
-    beervc.view.center = CGPointMake(arc4random() % 480, arc4random() % 320);
+    beervc.view.center = CGPointMake(20 + arc4random() % 420, 195);
     NSLog(NSStringFromCGPoint(beervc.view.center));
-    beervc.view.transform = CGAffineTransformRotate(beervc.view.transform, ((CGFloat)arc4random())/360.0);
-    [self.view addSubview:beervc.view];
+    [background addSubview:beervc.view];
   }
 }
 
@@ -56,6 +87,50 @@
 //    NSLog(@"display beer");
     [self displayBeer];
   }
+}
+
+- (IBAction)pause:(id)sender {
+  [self.view addSubview:pausevc.view];
+  [gametimer invalidate];
+}
+
+- (void)resume {
+  gametimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                               target:self
+                                             selector:@selector(updateTime)
+                                             userInfo:nil
+                                              repeats:YES];
+  [gametimer fire];
+}
+
+- (void)clearBeers {
+  for (int i = 0; i < [beerArray count]; i++) {
+    [((UIViewController*)[beerArray objectAtIndex:i]).view removeFromSuperview];
+  }
+}
+
+- (void)quit {
+  [pausevc.view removeFromSuperview];
+  self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+  [self dismissViewControllerAnimated:NO completion:^(void){}];
+}
+
+- (void)restart {
+  [gametimer invalidate];
+  [pausevc.view removeFromSuperview];
+  [self clearBeers];
+  timeLeft = 21;
+  timeLabel.text = @"21";
+  numberOfBeersTapped = 0;
+  scoreLabel.text = @"0";
+  [self displayBeer];
+  gametimer = nil;
+  gametimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                               target:self
+                                             selector:@selector(updateTime)
+                                             userInfo:nil
+                                              repeats:YES];
+  [gametimer fire];
 }
 
 - (void)viewDidUnload
