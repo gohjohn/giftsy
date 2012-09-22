@@ -28,6 +28,13 @@
 		6DE3A769160D77960023C29D /* beer-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A768160D77950023C29D /* beer-small.png */; };
 		6DE3A77E160D89B30023C29D /* DrinkGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE3A77C160D89B30023C29D /* DrinkGameViewController.m */; };
 		6DE3A77F160D89B30023C29D /* DrinkGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A77D160D89B30023C29D /* DrinkGameViewController.xib */; };
+		6DE3A786160D95540023C29D /* drink-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A781160D95540023C29D /* drink-button@2x.png */; };
+		6DE3A787160D95540023C29D /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A782160D95540023C29D /* logo@2x.png */; };
+		6DE3A788160D95540023C29D /* main-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A783160D95540023C29D /* main-bg@2x.png */; };
+		6DE3A789160D95540023C29D /* mydrinks-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A784160D95540023C29D /* mydrinks-button@2x.png */; };
+		6DE3A78A160D95540023C29D /* tap-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A785160D95540023C29D /* tap-button@2x.png */; };
+		6DE3A78D160D9E1A0023C29D /* tap-background-front@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A78B160D9E1A0023C29D /* tap-background-front@2x.png */; };
+		6DE3A78E160D9E1A0023C29D /* tap-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A78C160D9E1A0023C29D /* tap-background@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +78,13 @@
 		6DE3A77B160D89B30023C29D /* DrinkGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkGameViewController.h; sourceTree = "<group>"; };
 		6DE3A77C160D89B30023C29D /* DrinkGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkGameViewController.m; sourceTree = "<group>"; };
 		6DE3A77D160D89B30023C29D /* DrinkGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrinkGameViewController.xib; sourceTree = "<group>"; };
+		6DE3A781160D95540023C29D /* drink-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "drink-button@2x.png"; path = "images/drink-button@2x.png"; sourceTree = "<group>"; };
+		6DE3A782160D95540023C29D /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@2x.png"; path = "images/logo@2x.png"; sourceTree = "<group>"; };
+		6DE3A783160D95540023C29D /* main-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "main-bg@2x.png"; path = "images/main-bg@2x.png"; sourceTree = "<group>"; };
+		6DE3A784160D95540023C29D /* mydrinks-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mydrinks-button@2x.png"; path = "images/mydrinks-button@2x.png"; sourceTree = "<group>"; };
+		6DE3A785160D95540023C29D /* tap-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tap-button@2x.png"; path = "images/tap-button@2x.png"; sourceTree = "<group>"; };
+		6DE3A78B160D9E1A0023C29D /* tap-background-front@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tap-background-front@2x.png"; path = "images/tap-background-front@2x.png"; sourceTree = "<group>"; };
+		6DE3A78C160D9E1A0023C29D /* tap-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tap-background@2x.png"; path = "images/tap-background@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,9 +196,16 @@
 		6DE3A760160D6E9B0023C29D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6DE3A781160D95540023C29D /* drink-button@2x.png */,
+				6DE3A782160D95540023C29D /* logo@2x.png */,
+				6DE3A783160D95540023C29D /* main-bg@2x.png */,
+				6DE3A784160D95540023C29D /* mydrinks-button@2x.png */,
+				6DE3A785160D95540023C29D /* tap-button@2x.png */,
 				6DE3A768160D77950023C29D /* beer-small.png */,
 				6DE3A75C160D6E950023C29D /* background.png */,
 				6DE3A75D160D6E950023C29D /* beer.png */,
+				6DE3A78B160D9E1A0023C29D /* tap-background-front@2x.png */,
+				6DE3A78C160D9E1A0023C29D /* tap-background@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -267,6 +288,13 @@
 				6DE3A75F160D6E950023C29D /* beer.png in Resources */,
 				6DE3A769160D77960023C29D /* beer-small.png in Resources */,
 				6DE3A77F160D89B30023C29D /* DrinkGameViewController.xib in Resources */,
+				6DE3A786160D95540023C29D /* drink-button@2x.png in Resources */,
+				6DE3A787160D95540023C29D /* logo@2x.png in Resources */,
+				6DE3A788160D95540023C29D /* main-bg@2x.png in Resources */,
+				6DE3A789160D95540023C29D /* mydrinks-button@2x.png in Resources */,
+				6DE3A78A160D95540023C29D /* tap-button@2x.png in Resources */,
+				6DE3A78D160D9E1A0023C29D /* tap-background-front@2x.png in Resources */,
+				6DE3A78E160D9E1A0023C29D /* tap-background@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

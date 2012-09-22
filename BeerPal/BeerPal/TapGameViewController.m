@@ -31,6 +31,7 @@
   for (int i = 0; i < 5; i++) {
   }
   self.view.userInteractionEnabled = YES;
+  background.userInteractionEnabled = YES;
   [self displayBeer];
 }
 
@@ -40,10 +41,9 @@
     BeerItemViewController *beervc = [[BeerItemViewController alloc] init];
     beervc.delegate = self;
     [beerArray addObject:beervc];
-    beervc.view.center = CGPointMake(arc4random() % 480, arc4random() % 320);
+    beervc.view.center = CGPointMake(20 + arc4random() % 420, 195);
     NSLog(NSStringFromCGPoint(beervc.view.center));
-    beervc.view.transform = CGAffineTransformRotate(beervc.view.transform, ((CGFloat)arc4random())/360.0);
-    [self.view addSubview:beervc.view];
+    [background addSubview:beervc.view];
   }
 }
 

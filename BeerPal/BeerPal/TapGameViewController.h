@@ -14,6 +14,7 @@
   NSMutableArray *beerArray;
   int numberOfBeersTapped;
   IBOutlet UILabel *scoreLabel;
+  IBOutlet UIImageView *background;
 }
 
 @end
