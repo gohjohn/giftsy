@@ -192,32 +192,7 @@
 	UIAlertView *alert = nil;
 	switch (status) {
 		case PAYMENTSTATUS_SUCCESS:
-			
-      
-      
-      //SUCCESS!!!!!!!
-      //SUCCESS!!!!!!!
-      //SUCCESS!!!!!!!
-      //SUCCESS!!!!!!!
-      //SUCCESS!!!!!!!
-      //SUCCESS!!!!!!!
-      //SUCCESS!!!!!!!
-      //SUCCESS!!!!!!!
-      //SUCCESS!!!!!!!
-      //SUCCESS!!!!!!!
-      //SUCCESS!!!!!!!
-      //SUCCESS!!!!!!!
-      //SUCCESS!!!!!!!
-      //SUCCESS!!!!!!!
-      //SUCCESS!!!!!!!
-      //SUCCESS!!!!!!!
-      //SUCCESS!!!!!!!
-      //SUCCESS!!!!!!!
-      //SUCCESS!!!!!!!
-      
-      
-      
-      
+			[self dismissModalViewControllerAnimated:YES];
       break;
 		case PAYMENTSTATUS_FAILED:
 			alert = [[UIAlertView alloc] initWithTitle:@"Order failed"

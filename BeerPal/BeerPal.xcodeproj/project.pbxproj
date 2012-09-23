@@ -68,6 +68,13 @@
 		6DE3A80C160E7AC60023C29D /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A80B160E7AC60023C29D /* menu@2x.png */; };
 		6DE3A810160E7AE00023C29D /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE3A80E160E7ADD0023C29D /* MenuViewController.m */; };
 		6DE3A811160E7AE00023C29D /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A80F160E7ADE0023C29D /* MenuViewController.xib */; };
+		6DE3A826160E82490023C29D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE3A825160E82480023C29D /* AVFoundation.framework */; };
+		6DE3A828160E83FF0023C29D /* AcousticSunrise.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A827160E83FE0023C29D /* AcousticSunrise.caf */; };
+		6DE3A829160E846F0023C29D /* AcousticSunrise.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A827160E83FE0023C29D /* AcousticSunrise.caf */; };
+		6DE3A82B160E85A80023C29D /* mydrinks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A82A160E85A70023C29D /* mydrinks@2x.png */; };
+		6DE3A82F160E85BF0023C29D /* DrinksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE3A82D160E85BC0023C29D /* DrinksViewController.m */; };
+		6DE3A830160E85BF0023C29D /* DrinksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A82E160E85BD0023C29D /* DrinksViewController.xib */; };
+		6DE3A832160E86300023C29D /* mydrinks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DE3A831160E86300023C29D /* mydrinks@2x.png */; };
 		B8B04FF5160D8CB700B15411 /* 10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8B04FCD160D8CB700B15411 /* 10@2x.png */; };
 		B8B04FF6160D8CB700B15411 /* 11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8B04FCE160D8CB700B15411 /* 11@2x.png */; };
 		B8B04FF7160D8CB700B15411 /* 12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8B04FCF160D8CB700B15411 /* 12@2x.png */; };
@@ -205,6 +212,13 @@
 		6DE3A80D160E7ADB0023C29D /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		6DE3A80E160E7ADD0023C29D /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		6DE3A80F160E7ADE0023C29D /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		6DE3A825160E82480023C29D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6DE3A827160E83FE0023C29D /* AcousticSunrise.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AcousticSunrise.caf; sourceTree = "<group>"; };
+		6DE3A82A160E85A70023C29D /* mydrinks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mydrinks@2x.png"; path = "images/mydrinks@2x.png"; sourceTree = "<group>"; };
+		6DE3A82C160E85BA0023C29D /* DrinksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinksViewController.h; sourceTree = "<group>"; };
+		6DE3A82D160E85BC0023C29D /* DrinksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinksViewController.m; sourceTree = "<group>"; };
+		6DE3A82E160E85BD0023C29D /* DrinksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrinksViewController.xib; sourceTree = "<group>"; };
+		6DE3A831160E86300023C29D /* mydrinks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mydrinks@2x.png"; path = "images/mydrinks@2x.png"; sourceTree = "<group>"; };
 		B8B04FCD160D8CB700B15411 /* 10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10@2x.png"; sourceTree = "<group>"; };
 		B8B04FCE160D8CB700B15411 /* 11@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11@2x.png"; sourceTree = "<group>"; };
 		B8B04FCF160D8CB700B15411 /* 12@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12@2x.png"; sourceTree = "<group>"; };
@@ -252,6 +266,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DE3A826160E82490023C29D /* AVFoundation.framework in Frameworks */,
 				6DE3A801160E6ED60023C29D /* libxml2.2.7.3.dylib in Frameworks */,
 				6DE3A802160E6ED60023C29D /* libxml2.2.dylib in Frameworks */,
 				6DE3A803160E6ED60023C29D /* libxml2.dylib in Frameworks */,
@@ -280,11 +295,6 @@
 		6DE3A713160D688A0023C29D = {
 			isa = PBXGroup;
 			children = (
-				6DE3A7FE160E6ED50023C29D /* libxml2.2.7.3.dylib */,
-				6DE3A7FF160E6ED50023C29D /* libxml2.2.dylib */,
-				6DE3A800160E6ED60023C29D /* libxml2.dylib */,
-				6DE3A7FC160E6EBB0023C29D /* Security.framework */,
-				6DE3A7FA160E6EB20023C29D /* libz.dylib */,
 				6DE3A728160D688B0023C29D /* BeerPal */,
 				6DE3A7E8160E6A7F0023C29D /* PayPal */,
 				6DE3A746160D688D0023C29D /* BeerPalTests */,
@@ -305,6 +315,12 @@
 		6DE3A721160D688B0023C29D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6DE3A825160E82480023C29D /* AVFoundation.framework */,
+				6DE3A7FE160E6ED50023C29D /* libxml2.2.7.3.dylib */,
+				6DE3A7FF160E6ED50023C29D /* libxml2.2.dylib */,
+				6DE3A800160E6ED60023C29D /* libxml2.dylib */,
+				6DE3A7FC160E6EBB0023C29D /* Security.framework */,
+				6DE3A7FA160E6EB20023C29D /* libz.dylib */,
 				6DE3A722160D688B0023C29D /* UIKit.framework */,
 				6DE3A724160D688B0023C29D /* Foundation.framework */,
 				6DE3A726160D688B0023C29D /* CoreGraphics.framework */,
@@ -321,6 +337,9 @@
 				6DE3A734160D688B0023C29D /* ViewController.h */,
 				6DE3A735160D688B0023C29D /* ViewController.m */,
 				6DE3A737160D688C0023C29D /* ViewController.xib */,
+				6DE3A82C160E85BA0023C29D /* DrinksViewController.h */,
+				6DE3A82D160E85BC0023C29D /* DrinksViewController.m */,
+				6DE3A82E160E85BD0023C29D /* DrinksViewController.xib */,
 				6DE3A804160E6FF20023C29D /* CheckViewController.h */,
 				6DE3A805160E6FF30023C29D /* CheckViewController.m */,
 				6DE3A806160E6FF40023C29D /* CheckViewController.xib */,
@@ -380,6 +399,9 @@
 		6DE3A760160D6E9B0023C29D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6DE3A831160E86300023C29D /* mydrinks@2x.png */,
+				6DE3A82A160E85A70023C29D /* mydrinks@2x.png */,
+				6DE3A827160E83FE0023C29D /* AcousticSunrise.caf */,
 				6DE3A80B160E7AC60023C29D /* menu@2x.png */,
 				6DE3A809160E75E40023C29D /* checkout@2x.png */,
 				6DE3A7C2160E5AE40023C29D /* drink-background@2x.png */,
@@ -552,6 +574,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DE3A829160E846F0023C29D /* AcousticSunrise.caf in Resources */,
 				6DE3A72D160D688B0023C29D /* InfoPlist.strings in Resources */,
 				6DE3A739160D688C0023C29D /* ViewController.xib in Resources */,
 				6DE3A75B160D6AAC0023C29D /* TapGameViewController.xib in Resources */,
@@ -629,6 +652,9 @@
 				6DE3A80A160E75E40023C29D /* checkout@2x.png in Resources */,
 				6DE3A80C160E7AC60023C29D /* menu@2x.png in Resources */,
 				6DE3A811160E7AE00023C29D /* MenuViewController.xib in Resources */,
+				6DE3A82B160E85A80023C29D /* mydrinks@2x.png in Resources */,
+				6DE3A830160E85BF0023C29D /* DrinksViewController.xib in Resources */,
+				6DE3A832160E86300023C29D /* mydrinks@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +663,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DE3A74B160D688D0023C29D /* InfoPlist.strings in Resources */,
+				6DE3A828160E83FF0023C29D /* AcousticSunrise.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,6 +700,7 @@
 				6DE3A7B4160E52430023C29D /* EndGameViewController.m in Sources */,
 				6DE3A807160E6FF50023C29D /* CheckViewController.m in Sources */,
 				6DE3A810160E7AE00023C29D /* MenuViewController.m in Sources */,
+				6DE3A82F160E85BF0023C29D /* DrinksViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@
 #import "TapGameViewController.h"
 #import "DrinkGameViewController.h"
 #import "CheckViewController.h"
+#import "DrinksViewController.h"
 
 @interface ViewController ()
 
@@ -34,9 +35,8 @@
 }
 
 - (IBAction)myDrinks {
-  CheckViewController *checkoutvc = [[CheckViewController alloc] init];
-  [self presentModalViewController:checkoutvc animated:YES];
-    [checkoutvc loadItem:@"beer" Price:1010 Qn:2];
+  DrinksViewController *drinkvc = [[DrinksViewController alloc] init];
+  [self presentModalViewController:drinkvc animated:YES];
 }
 
 - (void)viewDidUnload

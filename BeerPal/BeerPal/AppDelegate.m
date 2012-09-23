@@ -20,6 +20,16 @@
   self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
   self.window.rootViewController = self.viewController;
   [[UIApplication sharedApplication] setStatusBarHidden:YES animated:NO];
+  
+  NSString *filePath = [[NSBundle mainBundle] pathForResource:@"AcousticSunrise"
+                                                       ofType:@"caf"];
+  NSURL *url = [[NSURL alloc] initFileURLWithPath:filePath];
+  audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:url error:nil];
+  audioPlayer.delegate = self;
+  [audioPlayer prepareToPlay];
+  [audioPlayer setNumberOfLoops:INFINITY];
+  [audioPlayer play];
+
     [self.window makeKeyAndVisible];
     return YES;
 }
