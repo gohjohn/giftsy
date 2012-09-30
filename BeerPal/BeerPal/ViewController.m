@@ -11,6 +11,7 @@
 #import "DrinkGameViewController.h"
 #import "CheckViewController.h"
 #import "DrinksViewController.h"
+#import "BluetoothViewController.h"
 
 @interface ViewController ()
 
@@ -37,6 +38,11 @@
 - (IBAction)myDrinks {
   DrinksViewController *drinkvc = [[DrinksViewController alloc] init];
   [self presentModalViewController:drinkvc animated:YES];
+}
+
+- (IBAction)bluetooth {
+  BluetoothViewController *btvc = [[BluetoothViewController alloc] init];
+  [self presentModalViewController:btvc animated:YES];
 }
 
 - (void)viewDidUnload

@@ -7,12 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GameKit/GameKit.h>
+
 #import "BeerItemViewController.h"
 #import "PauseViewController.h"
 #import "EndGameViewController.h"
 #import "CheckViewController.h"
 
-@interface TapGameViewController : UIViewController <tapGame, pauseActions, endActions> {
+typedef enum {
+  kPlaying,
+  kEnded
+} GameState;
+
+typedef enum {
+  kSingle,
+  kMultiplayer
+} GameMode;
+
+@interface TapGameViewController : UIViewController <tapGame, pauseActions, endActions, GKSessionDelegate, GKPeerPickerControllerDelegate> {
   
   NSMutableArray *beerArray;
   int numberOfBeersTapped;
@@ -23,6 +35,16 @@
   IBOutlet UILabel *timeLabel;
   NSTimer *gametimer;
   int timeLeft;
+  int opponentScore;
+  
+  GameState gamestate;
+  GameMode gamemode;
+  BOOL receivedOppResult;
+  
+  GKSession *gameSession;
+	// PeerPicker Object
+	GKPeerPickerController *peerPicker;
+  NSMutableArray *gamePeers;
 }
 
 @end

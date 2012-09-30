@@ -8,7 +8,12 @@
 
 #import "EndGameViewController.h"
 
-@interface EndGameViewController ()
+@interface EndGameViewController () {
+ 
+  UIImage *loseImage;
+  IBOutlet UIImageView *outcomeLose;
+  
+}
 
 @end
 
@@ -18,9 +23,15 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+      loseImage = [UIImage imageNamed:@"lose.png"];
         // Custom initialization
     }
     return self;
+}
+
+- (void)setLoseImage {
+  self.outcome.image = loseImage;
+  NSLog(@"set lose image");
 }
 
 - (IBAction)yes {

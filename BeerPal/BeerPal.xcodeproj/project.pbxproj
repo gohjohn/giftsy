@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D50BD2F1617C6D7000A7F61 /* BluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D50BD2D1617C6D6000A7F61 /* BluetoothViewController.m */; };
+		6D50BD301617C6D7000A7F61 /* BluetoothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D50BD2E1617C6D6000A7F61 /* BluetoothViewController.xib */; };
+		6D50BD321617C735000A7F61 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D50BD311617C735000A7F61 /* GameKit.framework */; };
 		6DE3A723160D688B0023C29D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE3A722160D688B0023C29D /* UIKit.framework */; };
 		6DE3A725160D688B0023C29D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE3A724160D688B0023C29D /* Foundation.framework */; };
 		6DE3A727160D688B0023C29D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE3A726160D688B0023C29D /* CoreGraphics.framework */; };
@@ -128,6 +131,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D50BD2C1617C6D6000A7F61 /* BluetoothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothViewController.h; sourceTree = "<group>"; };
+		6D50BD2D1617C6D6000A7F61 /* BluetoothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothViewController.m; sourceTree = "<group>"; };
+		6D50BD2E1617C6D6000A7F61 /* BluetoothViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BluetoothViewController.xib; sourceTree = "<group>"; };
+		6D50BD311617C735000A7F61 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		6DE3A71E160D688B0023C29D /* BeerPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE3A722160D688B0023C29D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6DE3A724160D688B0023C29D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -266,6 +273,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D50BD321617C735000A7F61 /* GameKit.framework in Frameworks */,
 				6DE3A826160E82490023C29D /* AVFoundation.framework in Frameworks */,
 				6DE3A801160E6ED60023C29D /* libxml2.2.7.3.dylib in Frameworks */,
 				6DE3A802160E6ED60023C29D /* libxml2.2.dylib in Frameworks */,
@@ -315,6 +323,7 @@
 		6DE3A721160D688B0023C29D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6D50BD311617C735000A7F61 /* GameKit.framework */,
 				6DE3A825160E82480023C29D /* AVFoundation.framework */,
 				6DE3A7FE160E6ED50023C29D /* libxml2.2.7.3.dylib */,
 				6DE3A7FF160E6ED50023C29D /* libxml2.2.dylib */,
@@ -334,6 +343,9 @@
 			children = (
 				6DE3A731160D688B0023C29D /* AppDelegate.h */,
 				6DE3A732160D688B0023C29D /* AppDelegate.m */,
+				6D50BD2C1617C6D6000A7F61 /* BluetoothViewController.h */,
+				6D50BD2D1617C6D6000A7F61 /* BluetoothViewController.m */,
+				6D50BD2E1617C6D6000A7F61 /* BluetoothViewController.xib */,
 				6DE3A734160D688B0023C29D /* ViewController.h */,
 				6DE3A735160D688B0023C29D /* ViewController.m */,
 				6DE3A737160D688C0023C29D /* ViewController.xib */,
@@ -345,10 +357,10 @@
 				6DE3A806160E6FF40023C29D /* CheckViewController.xib */,
 				6DE3A757160D6AAC0023C29D /* TapGameViewController.h */,
 				6DE3A758160D6AAC0023C29D /* TapGameViewController.m */,
+				6DE3A759160D6AAC0023C29D /* TapGameViewController.xib */,
 				6DE3A80D160E7ADB0023C29D /* MenuViewController.h */,
 				6DE3A80E160E7ADD0023C29D /* MenuViewController.m */,
 				6DE3A80F160E7ADE0023C29D /* MenuViewController.xib */,
-				6DE3A759160D6AAC0023C29D /* TapGameViewController.xib */,
 				6DE3A7B1160E52400023C29D /* EndGameViewController.h */,
 				6DE3A7B2160E52400023C29D /* EndGameViewController.m */,
 				6DE3A7B3160E52410023C29D /* EndGameViewController.xib */,
@@ -513,6 +525,7 @@
 				6DE3A71A160D688A0023C29D /* Sources */,
 				6DE3A71B160D688A0023C29D /* Frameworks */,
 				6DE3A71C160D688A0023C29D /* Resources */,
+				6D50BD2B1617C621000A7F61 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -655,6 +668,7 @@
 				6DE3A82B160E85A80023C29D /* mydrinks@2x.png in Resources */,
 				6DE3A830160E85BF0023C29D /* DrinksViewController.xib in Resources */,
 				6DE3A832160E86300023C29D /* mydrinks@2x.png in Resources */,
+				6D50BD301617C6D7000A7F61 /* BluetoothViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +684,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6D50BD2B1617C621000A7F61 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/usr/bin/codesign_allocate\nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ]; then\n/Applications/Xcode.app/Contents/Developer/iphoneentitlements511/gen_entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";\ncodesign -f -s \"iPhone Developer Jailbreak\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"\nfi";
+		};
 		6DE3A73D160D688D0023C29D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -701,6 +728,7 @@
 				6DE3A807160E6FF50023C29D /* CheckViewController.m in Sources */,
 				6DE3A810160E7AE00023C29D /* MenuViewController.m in Sources */,
 				6DE3A82F160E85BF0023C29D /* DrinksViewController.m in Sources */,
+				6D50BD2F1617C6D7000A7F61 /* BluetoothViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,7 +786,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -785,7 +813,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;

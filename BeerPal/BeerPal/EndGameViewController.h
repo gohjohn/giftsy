@@ -17,6 +17,9 @@
 
 @interface EndGameViewController : UIViewController
 
+@property (nonatomic, retain) IBOutlet UIImageView *outcome;
 @property (nonatomic, retain) id<endActions> delegate;
+
+- (void)setLoseImage;
 
 @end
